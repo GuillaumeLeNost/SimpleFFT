@@ -21,6 +21,8 @@
   </EXPORTFORMATS>
   <MAINGROUP id="dSZaUr" name="SimpleFFT">
     <GROUP id="{1081B5F3-110F-5325-BF52-3619EC9A436B}" name="Source">
+      <FILE id="sDfzZh" name="MainPanel.cpp" compile="1" resource="0" file="Source/MainPanel.cpp"/>
+      <FILE id="sqoZXj" name="MainPanel.h" compile="0" resource="0" file="Source/MainPanel.h"/>
       <FILE id="LmPdci" name="PluginProcessor.cpp" compile="1" resource="0"
             file="Source/PluginProcessor.cpp"/>
       <FILE id="PDJlla" name="PluginProcessor.h" compile="0" resource="0"
