@@ -13,6 +13,7 @@
 
 #include "../JuceLibraryCode/JuceHeader.h"
 #include "PluginProcessor.h"
+#include "MainPanel.h"
 
 
 //==============================================================================
@@ -27,6 +28,8 @@ public:
     //==============================================================================
     // This is just a standard Juce paint method...
     void paint (Graphics& g);
+private:
+	MainPanel* panel;
 };
 
 

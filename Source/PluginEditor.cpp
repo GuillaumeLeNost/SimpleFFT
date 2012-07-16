@@ -16,12 +16,16 @@
 SimpleFftAudioProcessorEditor::SimpleFftAudioProcessorEditor (SimpleFftAudioProcessor* ownerFilter)
     : AudioProcessorEditor (ownerFilter)
 {
+	panel = new MainPanel(ownerFilter);
+	addAndMakeVisible(panel);
+	
     // This is where our plugin's editor size is set.
     setSize (400, 300);
 }
 
 SimpleFftAudioProcessorEditor::~SimpleFftAudioProcessorEditor()
 {
+	delete panel;
 }
 
 //==============================================================================

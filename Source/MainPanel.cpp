@@ -3,7 +3,7 @@
 
   This is an automatically generated file created by the Jucer!
 
-  Creation date:  16 Jul 2012 3:45:39pm
+  Creation date:  16 Jul 2012 4:45:47pm
 
   Be careful when adding custom code to these files, as only the code within
   the "//[xyz]" and "//[/xyz]" sections will be retained when the file is loaded
@@ -29,12 +29,12 @@
 //[/MiscUserDefs]
 
 //==============================================================================
-MainPanel::MainPanel ()
+MainPanel::MainPanel (SimpleFftAudioProcessor* ptr)
     : Component (L"MainPanel"),
       slider (0)
 {
     addAndMakeVisible (slider = new Slider (L"new slider"));
-    slider->setRange (0, 10, 0);
+    slider->setRange (0, 1, 0);
     slider->setSliderStyle (Slider::Rotary);
     slider->setTextBoxStyle (Slider::NoTextBox, false, 80, 20);
     slider->addListener (this);
@@ -47,6 +47,9 @@ MainPanel::MainPanel ()
 
 
     //[Constructor] You can add your own custom stuff here..
+
+	processor = ptr;
+
     //[/Constructor]
 }
 
@@ -89,6 +92,9 @@ void MainPanel::sliderValueChanged (Slider* sliderThatWasMoved)
     if (sliderThatWasMoved == slider)
     {
         //[UserSliderCode_slider] -- add your slider handling code here..
+
+		processor->setParameterNotifyingHost(3, slider->getValue());
+
         //[/UserSliderCode_slider]
     }
 
@@ -111,12 +117,13 @@ void MainPanel::sliderValueChanged (Slider* sliderThatWasMoved)
 BEGIN_JUCER_METADATA
 
 <JUCER_COMPONENT documentType="Component" className="MainPanel" componentName="MainPanel"
-                 parentClasses="public Component" constructorParams="" variableInitialisers=""
-                 snapPixels="8" snapActive="1" snapShown="1" overlayOpacity="0.330000013"
-                 fixedSize="0" initialWidth="600" initialHeight="400">
+                 parentClasses="public Component" constructorParams="SimpleFftAudioProcessor* ptr"
+                 variableInitialisers="" snapPixels="8" snapActive="1" snapShown="1"
+                 overlayOpacity="0.330000013" fixedSize="0" initialWidth="600"
+                 initialHeight="400">
   <BACKGROUND backgroundColour="ffffffff"/>
   <SLIDER name="new slider" id="95839fbd5e1fb3cd" memberName="slider" virtualName=""
-          explicitFocusOrder="0" pos="97 96 199 168" min="0" max="10" int="0"
+          explicitFocusOrder="0" pos="97 96 199 168" min="0" max="1" int="0"
           style="Rotary" textBoxPos="NoTextBox" textBoxEditable="1" textBoxWidth="80"
           textBoxHeight="20" skewFactor="1"/>
 </JUCER_COMPONENT>

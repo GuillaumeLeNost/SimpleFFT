@@ -29,16 +29,24 @@ const String SimpleFftAudioProcessor::getName() const
 
 int SimpleFftAudioProcessor::getNumParameters()
 {
-    return 0;
+	//return 1 parameter (in this case, gain)
+    return 1;
 }
 
 float SimpleFftAudioProcessor::getParameter (int index)
 {
+	//this is relative to the value given in MainPanel.cpp
+	if (index == 3)
+		return gain;
+	
     return 0.0f;
 }
 
 void SimpleFftAudioProcessor::setParameter (int index, float newValue)
 {
+	//set gain to value recieved from control at index 3
+	if(index == 3)
+		gain = newValue;
 }
 
 const String SimpleFftAudioProcessor::getParameterName (int index)
@@ -132,9 +140,15 @@ void SimpleFftAudioProcessor::processBlock (AudioSampleBuffer& buffer, MidiBuffe
     for (int channel = 0; channel < getNumInputChannels(); ++channel)
     {
         float* channelData = buffer.getSampleData (channel);
-
+		
+		for (int sampleNum = 0; sampleNum <buffer.getNumSamples(); ++sampleNum)
+				{
+					channelData[sampleNum] = channelData[sampleNum] * gain;
+				}
         // ..do something to the data...
     }
+	
+	
 
     // In case we have more outputs than inputs, we'll clear any output
     // channels that didn't contain input data, (because these aren't
