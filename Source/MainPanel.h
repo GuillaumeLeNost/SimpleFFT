@@ -23,7 +23,7 @@
 #define __JUCER_HEADER_MAINPANEL_MAINPANEL_CEFA4231__
 
 //[Headers]     -- You can add your own extra header files here --
-#include "juce.h"
+#include "../JuceLibraryCode/JuceHeader.h"
 //[/Headers]
 
 
