@@ -137,19 +137,25 @@ void SimpleFftAudioProcessor::processBlock (AudioSampleBuffer& buffer, MidiBuffe
 {
     // This is the place where you'd normally do the guts of your plugin's
     // audio processing...
+	float gainStep = (gain - oldGain)/buffer.getNumSamples();
     for (int channel = 0; channel < getNumInputChannels(); ++channel)
     {
+		
         float* channelData = buffer.getSampleData (channel);
 		
 		for (int sampleNum = 0; sampleNum <buffer.getNumSamples(); ++sampleNum)
 				{
-					channelData[sampleNum] = channelData[sampleNum] * gain;
+					oldGain += gainStep;
+					channelData[sampleNum] = channelData[sampleNum] * oldGain ;
 				}
         // ..do something to the data...
+		
+		
     }
 	
+	oldGain = gain;
 	
-
+	
     // In case we have more outputs than inputs, we'll clear any output
     // channels that didn't contain input data, (because these aren't
     // guaranteed to be empty - they may contain garbage).
