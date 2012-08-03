@@ -1,0 +1,31 @@
+
+create github accounts
+
+create github repository
+
+add collaborators on github
+
+clone into local repositories
+
+download JUCE
+
+build Introjucer
+
+create new Audio Plugins project
+
+commit and push project files 
+
+install vstsdk2.4 to ~/SDKs
+
+create MainPanel.cpp in the Jucer
+
+add MainPanel.cpp and .h to Introjucer
+
+add to git with
+git add Source/MainPanel.h Source/MainPanel.cpp
+git commit -m "msg" Source
+
+git pull origin master
+
+
+
