@@ -12,6 +12,7 @@
 #define __PLUGINPROCESSOR_H_33D077FA__
 
 #include "../JuceLibraryCode/JuceHeader.h"
+#include "FastFourierTransformer.h"
 
 
 //==============================================================================
@@ -66,6 +67,7 @@ public:
 
 private:
 	float gain, oldGain;
+	FastFourierTransformer fft;
     //==============================================================================
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (SimpleFftAudioProcessor);
 };
