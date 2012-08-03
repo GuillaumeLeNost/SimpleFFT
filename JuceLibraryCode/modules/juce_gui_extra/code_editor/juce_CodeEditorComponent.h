@@ -194,6 +194,9 @@ public:
     */
     bool areSpacesInsertedForTabs() const               { return useSpacesForTabs; }
 
+    /** Returns a string containing spaces or tab characters to generate the given number of spaces. */
+    String getTabString (int numSpaces) const;
+
     /** Changes the font.
         Make sure you only use a fixed-width font, or this component will look pretty nasty!
     */
@@ -386,6 +389,7 @@ private:
     void newTransaction();
     void cut();
     void indentSelectedLines (int spacesToAdd);
+    bool skipBackwardsToPreviousTab();
 
     int indexToColumn (int line, int index) const noexcept;
     int columnToIndex (int line, int column) const noexcept;

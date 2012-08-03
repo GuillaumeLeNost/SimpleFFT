@@ -27,6 +27,7 @@
 #define JUCE_MODULE_AVAILABLE_juce_audio_formats            1
 #define JUCE_MODULE_AVAILABLE_juce_audio_plugin_client      1
 #define JUCE_MODULE_AVAILABLE_juce_audio_processors         1
+#define JUCE_MODULE_AVAILABLE_juce_audio_utils              1
 #define JUCE_MODULE_AVAILABLE_juce_core                     1
 #define JUCE_MODULE_AVAILABLE_juce_cryptography             1
 #define JUCE_MODULE_AVAILABLE_juce_data_structures          1
@@ -190,6 +191,9 @@
 #ifndef  JucePlugin_Build_RTAS
  #define JucePlugin_Build_RTAS             0
 #endif
+#ifndef  JucePlugin_Build_AAX
+ #define JucePlugin_Build_AAX              0
+#endif
 #ifndef  JucePlugin_Name
  #define JucePlugin_Name                   "SimpleFFT"
 #endif
@@ -273,6 +277,21 @@
 #endif
 #ifndef  JucePlugin_RTASProductId
  #define JucePlugin_RTASProductId          JucePlugin_PluginCode
+#endif
+#ifndef  JucePlugin_AAXIdentifier
+ #define JucePlugin_AAXIdentifier          com.yourcompany.SimpleFFT
+#endif
+#ifndef  JucePlugin_AAXManufacturerCode
+ #define JucePlugin_AAXManufacturerCode    JucePlugin_ManufacturerCode
+#endif
+#ifndef  JucePlugin_AAXProductId
+ #define JucePlugin_AAXProductId           JucePlugin_PluginCode
+#endif
+#ifndef  JucePlugin_AAXPluginId
+ #define JucePlugin_AAXPluginId            JucePlugin_PluginCode
+#endif
+#ifndef  JucePlugin_AAXCategory
+ #define JucePlugin_AAXCategory            AAX_ePlugInCategory_Dynamics
 #endif
 
 #endif  // __JUCE_APPCONFIG_LQRZFK__
