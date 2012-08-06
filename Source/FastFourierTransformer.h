@@ -12,7 +12,13 @@
 #define __FASTFOURIERTRANSFORMER_H_9F2E8A4F__
 
 class FastFourierTransformer {
+
 public:
+	
+	void processForward(float* channelData, double* fftData, int bufSize);
+	void processBackward(double* fftData, float* channelData, int bufSize);
+	
+	
 	
 };
 

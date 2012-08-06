@@ -135,21 +135,34 @@ void SimpleFftAudioProcessor::releaseResources()
 
 void SimpleFftAudioProcessor::processBlock (AudioSampleBuffer& buffer, MidiBuffer& midiMessages)
 {
+	
     // This is the place where you'd normally do the guts of your plugin's
     // audio processing...
+	
+	int   bufsize = buffer.getNumSamples();
 	float gainStep = (gain - oldGain)/buffer.getNumSamples();
+	
     for (int channel = 0; channel < getNumInputChannels(); ++channel)
     {
 		
         float* channelData = buffer.getSampleData (channel);
+		double fftData[bufsize];
 		
-		for (int sampleNum = 0; sampleNum <buffer.getNumSamples(); ++sampleNum)
-				{
-					oldGain += gainStep;
-					channelData[sampleNum] = channelData[sampleNum] * oldGain ;
-				}
-        // ..do something to the data...
+//fft
 		
+		fft.processForward(channelData, fftData, bufsize);
+		
+// do something
+		
+		for (int sampleNum = 0; sampleNum <bufsize; ++sampleNum)
+						{
+							oldGain += gainStep;
+							fftData[sampleNum] = fftData[sampleNum] * oldGain ;
+						}
+		
+// inverse fft
+		
+		fft.processBackward(fftData, channelData, bufsize);		
 		
     }
 	
@@ -159,6 +172,7 @@ void SimpleFftAudioProcessor::processBlock (AudioSampleBuffer& buffer, MidiBuffe
     // In case we have more outputs than inputs, we'll clear any output
     // channels that didn't contain input data, (because these aren't
     // guaranteed to be empty - they may contain garbage).
+	
     for (int i = getNumInputChannels(); i < getNumOutputChannels(); ++i)
     {
         buffer.clear (i, 0, buffer.getNumSamples());
