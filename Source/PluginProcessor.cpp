@@ -15,10 +15,12 @@
 //==============================================================================
 SimpleFftAudioProcessor::SimpleFftAudioProcessor()
 {
+	fft = NULL;
 }
 
 SimpleFftAudioProcessor::~SimpleFftAudioProcessor()
 {
+	deleteAndZero(fft);
 }
 
 //==============================================================================
@@ -131,15 +133,23 @@ void SimpleFftAudioProcessor::releaseResources()
 {
     // When playback stops, you can use this as an opportunity to free up any
     // spare memory, etc.
+	deleteAndZero(fft);
 }
 
 void SimpleFftAudioProcessor::processBlock (AudioSampleBuffer& buffer, MidiBuffer& midiMessages)
 {
-	
+
+
     // This is the place where you'd normally do the guts of your plugin's
     // audio processing...
 	
 	int   bufsize = buffer.getNumSamples();
+	
+	if(fft == NULL)
+		
+		fft = new FastFourierTransformer(bufsize);
+	
+	
 	float gainStep = (gain - oldGain)/buffer.getNumSamples();
 	
     for (int channel = 0; channel < getNumInputChannels(); ++channel)
@@ -150,7 +160,7 @@ void SimpleFftAudioProcessor::processBlock (AudioSampleBuffer& buffer, MidiBuffe
 		
 //fft
 		
-		fft.processForward(channelData, fftData, bufsize);
+		fft->processForward(channelData, fftData, bufsize);
 		
 // do something
 		
@@ -162,7 +172,7 @@ void SimpleFftAudioProcessor::processBlock (AudioSampleBuffer& buffer, MidiBuffe
 		
 // inverse fft
 		
-		fft.processBackward(fftData, channelData, bufsize);		
+		fft->processBackward(fftData, channelData, bufsize);		
 		
     }
 	

@@ -67,7 +67,7 @@ public:
 
 private:
 	float gain, oldGain;
-	FastFourierTransformer fft;
+	FastFourierTransformer* fft;
     //==============================================================================
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (SimpleFftAudioProcessor);
 };
