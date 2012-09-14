@@ -137,38 +137,45 @@ void SimpleFftAudioProcessor::releaseResources()
 }
 
 void SimpleFftAudioProcessor::processBlock (AudioSampleBuffer& buffer, MidiBuffer& midiMessages)
-{
 
+{
 
     // This is the place where you'd normally do the guts of your plugin's
     // audio processing...
 	
 	int   bufsize = buffer.getNumSamples();
 	
-	if(fft == NULL)
+	if(fft == NULL) {
 		
 		fft = new FastFourierTransformer(bufsize);
 	
+	}
 	
-	float gainStep = (gain - oldGain)/buffer.getNumSamples();
+//	float gainStep = (gain - oldGain)/buffer.getNumSamples();
 	
     for (int channel = 0; channel < getNumInputChannels(); ++channel)
-    {
+	{
 		
         float* channelData = buffer.getSampleData (channel);
-		double fftData[bufsize];
+		float  fftData[bufsize];  //change this to type fftw3complex
 		
 //fft
 		
 		fft->processForward(channelData, fftData, bufsize);
 		
-// do something
 		
-		for (int sampleNum = 0; sampleNum <bufsize; ++sampleNum)
-						{
-							oldGain += gainStep;
-							fftData[sampleNum] = fftData[sampleNum] * oldGain ;
-						}
+// do something
+
+//		fft->freqDomainGain(fftData, bufsize, gain);
+		
+//		for (int sampleNum = 0; sampleNum < bufsize; ++sampleNum)
+//			
+//		{
+//			oldGain += gainStep;
+//			channelData[sampleNum] = channelData[sampleNum] * oldGain ;
+//		}
+		
+		
 		
 // inverse fft
 		
@@ -176,7 +183,7 @@ void SimpleFftAudioProcessor::processBlock (AudioSampleBuffer& buffer, MidiBuffe
 		
     }
 	
-	oldGain = gain;
+//	oldGain = gain;
 	
 	
     // In case we have more outputs than inputs, we'll clear any output

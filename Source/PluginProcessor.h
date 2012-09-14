@@ -66,8 +66,11 @@ public:
     void setStateInformation (const void* data, int sizeInBytes);
 
 private:
-	float gain, oldGain;
+	
+	float gain, oldGain; 
 	FastFourierTransformer* fft;
+
+	
     //==============================================================================
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (SimpleFftAudioProcessor);
 };
