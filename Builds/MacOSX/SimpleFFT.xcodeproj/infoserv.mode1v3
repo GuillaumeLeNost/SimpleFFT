@@ -328,18 +328,18 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>7F3AFC3B160E62F000132FC6</string>
+										<string>7F3AFCA3160E757D00132FC6</string>
 										<key>history</key>
 										<array>
 											<string>7F7BEDE215B4723000ECEF74</string>
 											<string>7F4A1DD715D03A92000605B0</string>
 											<string>7FD88FF1160BE4B400FE3352</string>
-											<string>7FD89035160BE8F900FE3352</string>
 											<string>7FD89036160BE8F900FE3352</string>
-											<string>7FD89037160BE8F900FE3352</string>
 											<string>7F3AFC33160E603100132FC6</string>
-											<string>7F3AFC34160E603100132FC6</string>
-											<string>7F3AFC35160E603100132FC6</string>
+											<string>7F3AFC99160E732200132FC6</string>
+											<string>7F3AFC9A160E732200132FC6</string>
+											<string>7F3AFC9B160E732200132FC6</string>
+											<string>7F3AFC9C160E732200132FC6</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -537,8 +537,8 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>/Users/infoserv/Documents/git_stuff/SimpleFFT/Builds/MacOSX/SimpleFFT.xcodeproj</string>
 		<string>7F8FCDBE15B458BE00573402</string>
+		<string>/Users/infoserv/Documents/git_stuff/SimpleFFT/Builds/MacOSX/SimpleFFT.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
 	<string>41 74 1173 688 0 0 1280 778 </string>
@@ -633,7 +633,7 @@
 			<key>WindowToolGUID</key>
 			<string>7F8FCDBE15B458BE00573402</string>
 			<key>WindowToolIsVisible</key>
-			<true/>
+			<false/>
 		</dict>
 		<dict>
 			<key>FirstTimeWindowDisplayed</key>
