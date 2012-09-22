@@ -30,12 +30,12 @@ public:
 	void processForward(float* channelData, float* fftData, int bufSize);
 	void processBackward(float* fftData, float* channelData, int bufSize);
 	
-	void freqDomainGain(float* fftData, int bufSize, float gain);
+	void freqDomainGain(int bufSize, float gain);
 	
-	void poltocarX (float Pangle, float Pradius);
-	void poltocarY (float Pangle, float Pradius);
-	void cartopolAngle (float* Cx, float* Cy);
-	void cartopolRadius (double Cx, double Cy);
+	float poltocarX (float Pangle, float Pradius);
+	float poltocarY (float Pangle, float Pradius);
+	float cartopolAngle (float Cx, float Cy);
+	float cartopolRadius (float Cx, float Cy);
 	
 						
 // member variables
@@ -45,7 +45,7 @@ private:
 	fftw_complex    *data, *fft_result, *ifft_result, *fft_temp;	
 	fftw_plan       plan_forward, plan_backward;
 	float           fftGain, oldFftGain;
-	float			*magnitude[];
+	float			magnitude[];
 	float			phase[];
 	int             i;
 	

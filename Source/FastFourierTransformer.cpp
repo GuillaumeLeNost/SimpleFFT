@@ -8,9 +8,55 @@
   ==============================================================================
 */
 
+\
 #include "fftw3.h"
 #include "FastFourierTransformer.h"
 
+
+//polar/cartesian conversion functions
+
+//--------------------------------------------------------------
+
+//polar to cartesian conversion functions
+
+float FastFourierTransformer::poltocarX ( float angle, float radius) { 
+	
+	return cos(angle) * radius;
+}
+
+
+//--------------------------------------------------------------
+
+float FastFourierTransformer::poltocarY ( float angle, float radius) {
+	
+	return sin(angle) * radius ;
+	
+}
+
+//--------------------------------------------------------------
+
+//cartesian to polar conversion functions
+
+float FastFourierTransformer::cartopolRadius ( float x, float y) {
+	
+	
+	return sqrt(y * y + x * x);
+	
+}
+
+//--------------------------------------------------------------
+
+float FastFourierTransformer::cartopolAngle ( float x, float y)  { 
+	
+    if (x > 0) { return atan(y/x); }
+	if (x < 0 && y >= 0) {return atan(y/x) + M_PI; }
+	if (x < 0 && y < 0) {return atan(y/x) - M_PI; }
+	if (y > 0) { return M_PI / 2; }
+	if (y < 0) { return -M_PI / 2; }
+	
+	return 0;
+	
+}
 //--------------------------------------------------------------
 
 // simple fft class implementation
@@ -22,6 +68,7 @@ FastFourierTransformer::FastFourierTransformer(int bufSize) {
 	data        = (fftw_complex*) fftw_malloc(sizeof(fftw_complex) * bufSize);
 	fft_result  = (fftw_complex*) fftw_malloc(sizeof(fftw_complex) * bufSize);
 	ifft_result = (fftw_complex*) fftw_malloc(sizeof(fftw_complex) * bufSize);
+//	fft_temp	= (fftw_complex*) fftw_malloc(sizeof(fftw_complex) * bufSize);
 	
 	plan_forward  = fftw_plan_dft_1d(bufSize, data, fft_result, FFTW_FORWARD, FFTW_MEASURE);
 	plan_backward = fftw_plan_dft_1d(bufSize, data, ifft_result, FFTW_BACKWARD, FFTW_MEASURE);	
@@ -56,14 +103,12 @@ void FastFourierTransformer::processForward(float* channelData, float* fftData, 
 		
 	fftw_execute(plan_forward);
 	
-	
-	for(i = 0; i < bufSize; i++) {
+	for (int i; i < bufSize; i++) {
+		
+		fftData[i] = fft_result[i][0];
+	}
 
 		
-//			magnitude[i] = cartopolRadius(fft_result[i][0], fft_result[i][1]);
-//			polar_Coordinates[i][1] = cartopolAngle(fft_result[i][0], fft_result[i][1]);		
-	}
-	
 }
 
 //--------------------------------------------------------------
@@ -71,7 +116,9 @@ void FastFourierTransformer::processForward(float* channelData, float* fftData, 
 // inverse fft conversion method
 
 void FastFourierTransformer::processBackward(float* fftData, float* channelData, int bufSize) {
+
 		
+	
 	for(i = 0; i < bufSize; i++) {
 		
 		data[i][0] = fftData[i]; // stick your fft data in here!
@@ -90,59 +137,25 @@ void FastFourierTransformer::processBackward(float* fftData, float* channelData,
 
 //--------------------------------------------------------------
 
-//polar to cartesian conversion functions
-
-float poltocarX ( float angle, float radius) { 
-	
-	return cos(angle) * radius;
-}
-
-
-//--------------------------------------------------------------
-
-float poltocarY ( float angle, float radius) {
-	
-	return sin(angle) * radius ;
-	
-}
-
-//--------------------------------------------------------------
-
-//cartesian to polar conversion functions
-
-double cartopolRadius ( double x, double y) {
-	
-	
-	return sqrt(y * y + x * x);
-	
-}
-
-//--------------------------------------------------------------
-
-float cartopolAngle ( float x, float y)  { 
-	
-    if (x > 0) { return atan(y/x); }
-	if (x < 0 && y >= 0) {return atan(y/x) + M_PI; }
-	if (x < 0 && y < 0) {return atan(y/x) - M_PI; }
-	if (y > 0) { return M_PI / 2; }
-	if (y < 0) { return -M_PI / 2; }
-	
-	return 0;
-	
-}
-
-//--------------------------------------------------------------
-
 // gain function - this needs some attention!
 
-void FastFourierTransformer::freqDomainGain(float* fftData, int bufSize, float fftGain) {
+void FastFourierTransformer::freqDomainGain(int bufSize, float fftGain) {
 	
-	float fftGainStep = (fftGain - oldFftGain) / bufSize;
-
+	float fftGainStep;
+	
+	//cartesian to polar conversion
+	
 	for(i = 0; i < bufSize; i++) {
 		
+		magnitude[i] = cartopolRadius( fft_result[i][0], fft_result[i][1]);
+		phase[i]	 = cartopolAngle(fft_result[i][0], fft_result[i][1]);		
+	}		
+
+	for(i = 0; i < bufSize; i++) {
+
+		fftGainStep = (magnitude[i] - oldFftGain) / bufSize;
 		oldFftGain += fftGainStep;
-		fftData[i] = fftData[i] * oldFftGain ;
+		magnitude[i] = magnitude[i] * oldFftGain ;
 		
 //		channelData[i] = fftData[i][0];
 //		data[i][1] = fftData[i][1];
