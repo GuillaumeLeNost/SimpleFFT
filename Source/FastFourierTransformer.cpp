@@ -58,8 +58,10 @@ void FastFourierTransformer::processForward(float* channelData, float* fftData, 
 	
 	
 	for(i = 0; i < bufSize; i++) {
+
 		
-		fftData[i] = fft_result[i][0];
+//			magnitude[i] = cartopolRadius(fft_result[i][0], fft_result[i][1]);
+//			polar_Coordinates[i][1] = cartopolAngle(fft_result[i][0], fft_result[i][1]);		
 	}
 	
 }
@@ -73,7 +75,7 @@ void FastFourierTransformer::processBackward(float* fftData, float* channelData,
 	for(i = 0; i < bufSize; i++) {
 		
 		data[i][0] = fftData[i]; // stick your fft data in here!
-//		data[i][1] = 0.0;        // use this if your data is complex valued
+//		data[i][1] = fft_temp[i][1];        // use this if your data is complex valued
 	}	
 	
 	fftw_execute(plan_backward);
@@ -108,7 +110,7 @@ float poltocarY ( float angle, float radius) {
 
 //cartesian to polar conversion functions
 
-float cartopolRadius ( float x, float y) {
+double cartopolRadius ( double x, double y) {
 	
 	
 	return sqrt(y * y + x * x);
@@ -120,10 +122,10 @@ float cartopolRadius ( float x, float y) {
 float cartopolAngle ( float x, float y)  { 
 	
     if (x > 0) { return atan(y/x); }
-	if (x < 0 && y >= 0) {return atan(y/x) + PI; }
-	if (x < 0 && y < 0) {return atan(y/x) - PI; }
-	if (y > 0) { return PI / 2; }
-	if (y < 0) { return -PI / 2; }
+	if (x < 0 && y >= 0) {return atan(y/x) + M_PI; }
+	if (x < 0 && y < 0) {return atan(y/x) - M_PI; }
+	if (y > 0) { return M_PI / 2; }
+	if (y < 0) { return -M_PI / 2; }
 	
 	return 0;
 	

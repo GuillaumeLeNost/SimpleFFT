@@ -8,7 +8,10 @@
   ==============================================================================
 */
 
+#define USE_MATH_DEFINES
+
 #include "fftw3.h"
+#include "math.h"
 
 #ifndef __FASTFOURIERTRANSFORMER_H_9F2E8A4F__
 #define __FASTFOURIERTRANSFORMER_H_9F2E8A4F__
@@ -32,17 +35,19 @@ public:
 	void poltocarX (float Pangle, float Pradius);
 	void poltocarY (float Pangle, float Pradius);
 	void cartopolAngle (float* Cx, float* Cy);
-	void cartopolRadius (float* Cx, float* Cy);
+	void cartopolRadius (double Cx, double Cy);
 	
 						
 // member variables
 	
 private:
 	
-	fftw_complex    *data, *fft_result, *ifft_result;	
+	fftw_complex    *data, *fft_result, *ifft_result, *fft_temp;	
 	fftw_plan       plan_forward, plan_backward;
-	float fftGain, oldFftGain;
-	int i;
+	float           fftGain, oldFftGain;
+	float			*magnitude[];
+	float			phase[];
+	int             i;
 	
 };
 
