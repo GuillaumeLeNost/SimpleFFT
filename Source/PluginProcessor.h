@@ -55,11 +55,11 @@ public:
     bool producesMidi() const;
 
     //==============================================================================
-    int getNumPrograms();
-    int getCurrentProgram();
-    void setCurrentProgram (int index);
+    int   getNumPrograms();
+    int   getCurrentProgram();
+    void  setCurrentProgram (int index);
     const String getProgramName (int index);
-    void changeProgramName (int index, const String& newName);
+    void  changeProgramName (int index, const String& newName);
 
     //==============================================================================
     void getStateInformation (MemoryBlock& destData);
@@ -69,6 +69,8 @@ private:
 	
 	float gain, oldGain; 
 	FastFourierTransformer* fft;
+	fftw_complex*  fftData;  //change this to type fftw3complex
+	
 
 	
     //==============================================================================

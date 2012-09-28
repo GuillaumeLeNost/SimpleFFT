@@ -68,7 +68,6 @@ FastFourierTransformer::FastFourierTransformer(int bufSize) {
 	data        = (fftw_complex*) fftw_malloc(sizeof(fftw_complex) * bufSize);
 	fft_result  = (fftw_complex*) fftw_malloc(sizeof(fftw_complex) * bufSize);
 	ifft_result = (fftw_complex*) fftw_malloc(sizeof(fftw_complex) * bufSize);
-//	fft_temp	= (fftw_complex*) fftw_malloc(sizeof(fftw_complex) * bufSize);
 	
 	plan_forward  = fftw_plan_dft_1d(bufSize, data, fft_result, FFTW_FORWARD, FFTW_MEASURE);
 	plan_backward = fftw_plan_dft_1d(bufSize, data, ifft_result, FFTW_BACKWARD, FFTW_MEASURE);	
@@ -93,7 +92,7 @@ FastFourierTransformer::~FastFourierTransformer() {
 
 // fft conversion method
 
-void FastFourierTransformer::processForward(float* channelData, float* fftData, int bufSize) {
+void FastFourierTransformer::processForward(float* channelData, fftw_complex* fftData, int bufSize) {
 	
 	for(i = 0; i < bufSize; i++) {
 		
@@ -105,7 +104,8 @@ void FastFourierTransformer::processForward(float* channelData, float* fftData, 
 	
 	for (int i; i < bufSize; i++) {
 		
-		fftData[i] = fft_result[i][0];
+		fftData[i][0] = fft_result[i][0];
+		fftData[i][1] = fft_result[i][1];
 	}
 
 		
@@ -115,14 +115,13 @@ void FastFourierTransformer::processForward(float* channelData, float* fftData, 
 
 // inverse fft conversion method
 
-void FastFourierTransformer::processBackward(float* fftData, float* channelData, int bufSize) {
-
+void FastFourierTransformer::processBackward(fftw_complex* fftData, float* channelData, int bufSize) {
 		
 	
 	for(i = 0; i < bufSize; i++) {
 		
-		data[i][0] = fftData[i]; // stick your fft data in here!
-//		data[i][1] = fft_temp[i][1];        // use this if your data is complex valued
+		data[i][0] = fftData[i][0];        // stick your fft data in here!
+		data[i][1] = fftData[i][1];        // use this if your data is complex valued
 	}	
 	
 	fftw_execute(plan_backward);

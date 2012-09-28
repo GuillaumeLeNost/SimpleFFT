@@ -27,8 +27,8 @@ public:
 	FastFourierTransformer(int bufSize);
 	~FastFourierTransformer();
 	
-	void processForward(float* channelData, float* fftData, int bufSize);
-	void processBackward(float* fftData, float* channelData, int bufSize);
+	void processForward(float* channelData, fftw_complex* fftData, int bufSize);
+	void processBackward(fftw_complex* fftData, float* channelData, int bufSize);
 	
 	void freqDomainGain(int bufSize, float gain);
 	
@@ -42,7 +42,7 @@ public:
 	
 private:
 	
-	fftw_complex    *data, *fft_result, *ifft_result, *fft_temp;	
+	fftw_complex    *data, *fft_result, *ifft_result, *tempData;	
 	fftw_plan       plan_forward, plan_backward;
 	float           fftGain, oldFftGain;
 	float			magnitude[];
