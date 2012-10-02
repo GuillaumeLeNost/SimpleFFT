@@ -46,9 +46,9 @@ private:
 	
 	fftw_complex    *data, *fft_result, *ifft_result;	
 	fftw_plan       plan_forward, plan_backward;
-	float           fftGain, oldFftGain;
-	float			magnitude[];
-	float			phase[];
+	double           fftGain, oldFftGain;
+	double			magnitude[];
+	double			phase[];
 	int             i;
 	
 };

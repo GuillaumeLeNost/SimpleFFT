@@ -173,6 +173,17 @@
 			7F065D53161B3DE5008D145D /* PBXTextBookmark */ = 7F065D53161B3DE5008D145D /* PBXTextBookmark */;
 			7F065D54161B3DE5008D145D /* PBXTextBookmark */ = 7F065D54161B3DE5008D145D /* PBXTextBookmark */;
 			7F065D55161B3DE5008D145D /* PBXTextBookmark */ = 7F065D55161B3DE5008D145D /* PBXTextBookmark */;
+			7F065D58161B3FB7008D145D /* PBXTextBookmark */ = 7F065D58161B3FB7008D145D /* PBXTextBookmark */;
+			7F065D5B161B4058008D145D /* PBXTextBookmark */ = 7F065D5B161B4058008D145D /* PBXTextBookmark */;
+			7F065D5C161B4058008D145D /* PBXTextBookmark */ = 7F065D5C161B4058008D145D /* PBXTextBookmark */;
+			7F065D5D161B4058008D145D /* PBXTextBookmark */ = 7F065D5D161B4058008D145D /* PBXTextBookmark */;
+			7F065D60161B40AF008D145D /* PBXTextBookmark */ = 7F065D60161B40AF008D145D /* PBXTextBookmark */;
+			7F065D63161B4100008D145D /* PBXTextBookmark */ = 7F065D63161B4100008D145D /* PBXTextBookmark */;
+			7F065D64161B4100008D145D /* PBXTextBookmark */ = 7F065D64161B4100008D145D /* PBXTextBookmark */;
+			7F065D65161B4100008D145D /* PBXTextBookmark */ = 7F065D65161B4100008D145D /* PBXTextBookmark */;
+			7F065D68161B4213008D145D /* PBXTextBookmark */ = 7F065D68161B4213008D145D /* PBXTextBookmark */;
+			7F065D69161B4213008D145D /* PBXTextBookmark */ = 7F065D69161B4213008D145D /* PBXTextBookmark */;
+			7F065D6A161B4213008D145D /* PBXTextBookmark */ = 7F065D6A161B4213008D145D /* PBXTextBookmark */;
 			7F3AFBD4160E459300132FC6 = 7F3AFBD4160E459300132FC6 /* PBXTextBookmark */;
 			7F3AFBD5160E459300132FC6 = 7F3AFBD5160E459300132FC6 /* PBXTextBookmark */;
 			7F3AFBDF160E460E00132FC6 = 7F3AFBDF160E460E00132FC6 /* PBXTextBookmark */;
@@ -268,9 +279,9 @@
 	};
 	7AFCE3DB82619DF1BCA5951E /* FastFourierTransformer.cpp */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {746, 3159}}";
-			sepNavSelRange = "{1848, 0}";
-			sepNavVisRange = "{1516, 964}";
+			sepNavIntBoundsRect = "{{0, 0}, {746, 3133}}";
+			sepNavSelRange = "{3485, 0}";
+			sepNavVisRange = "{1018, 1116}";
 		};
 	};
 	7F065C6B161B19BB008D145D /* PBXBookmarkGroup */ = {
@@ -285,7 +296,7 @@
 		fRef = 7AFCE3DB82619DF1BCA5951E /* FastFourierTransformer.cpp */;
 		name = "FastFourierTransformer.cpp: 114";
 		rLen = 0;
-		rLoc = 3076;
+		rLoc = 3082;
 		rType = 0;
 		vrLen = 972;
 		vrLoc = 2467;
@@ -314,7 +325,7 @@
 		fRef = 7AFCE3DB82619DF1BCA5951E /* FastFourierTransformer.cpp */;
 		name = "FastFourierTransformer.cpp: 114";
 		rLen = 0;
-		rLoc = 3076;
+		rLoc = 3082;
 		rType = 0;
 		vrLen = 972;
 		vrLoc = 2467;
@@ -373,7 +384,7 @@
 		fRef = 7AFCE3DB82619DF1BCA5951E /* FastFourierTransformer.cpp */;
 		name = "FastFourierTransformer.cpp: 114";
 		rLen = 0;
-		rLoc = 3076;
+		rLoc = 3082;
 		rType = 0;
 		vrLen = 1075;
 		vrLoc = 1148;
@@ -525,8 +536,8 @@
 		isa = PBXTextBookmark;
 		fRef = 7AFCE3DB82619DF1BCA5951E /* FastFourierTransformer.cpp */;
 		name = "FastFourierTransformer.cpp: 121";
-		rLen = 191;
-		rLoc = 3273;
+		rLen = 203;
+		rLoc = 3279;
 		rType = 0;
 		vrLen = 838;
 		vrLoc = 2749;
@@ -565,8 +576,8 @@
 		isa = PBXTextBookmark;
 		fRef = 7AFCE3DB82619DF1BCA5951E /* FastFourierTransformer.cpp */;
 		name = "FastFourierTransformer.cpp: 121";
-		rLen = 191;
-		rLoc = 3273;
+		rLen = 203;
+		rLoc = 3279;
 		rType = 0;
 		vrLen = 963;
 		vrLoc = 1359;
@@ -645,7 +656,7 @@
 		fRef = 7AFCE3DB82619DF1BCA5951E /* FastFourierTransformer.cpp */;
 		name = "FastFourierTransformer.cpp: 111";
 		rLen = 0;
-		rLoc = 3051;
+		rLoc = 3057;
 		rType = 0;
 		vrLen = 936;
 		vrLoc = 2296;
@@ -694,7 +705,7 @@
 		fRef = 7AFCE3DB82619DF1BCA5951E /* FastFourierTransformer.cpp */;
 		name = "FastFourierTransformer.cpp: 103";
 		rLen = 0;
-		rLoc = 2915;
+		rLoc = 2921;
 		rType = 0;
 		vrLen = 867;
 		vrLoc = 2294;
@@ -704,7 +715,7 @@
 		fRef = 7AFCE3DB82619DF1BCA5951E /* FastFourierTransformer.cpp */;
 		name = "FastFourierTransformer.cpp: 118";
 		rLen = 0;
-		rLoc = 3051;
+		rLoc = 3057;
 		rType = 0;
 		vrLen = 861;
 		vrLoc = 2294;
@@ -714,7 +725,7 @@
 		fRef = 7AFCE3DB82619DF1BCA5951E /* FastFourierTransformer.cpp */;
 		name = "FastFourierTransformer.cpp: 100";
 		rLen = 0;
-		rLoc = 2798;
+		rLoc = 2804;
 		rType = 0;
 		vrLen = 867;
 		vrLoc = 2296;
@@ -724,7 +735,7 @@
 		fRef = 7AFCE3DB82619DF1BCA5951E /* FastFourierTransformer.cpp */;
 		name = "FastFourierTransformer.cpp: 121";
 		rLen = 0;
-		rLoc = 3045;
+		rLoc = 3051;
 		rType = 0;
 		vrLen = 795;
 		vrLoc = 2444;
@@ -753,7 +764,7 @@
 		fRef = 7AFCE3DB82619DF1BCA5951E /* FastFourierTransformer.cpp */;
 		name = "FastFourierTransformer.cpp: 102";
 		rLen = 0;
-		rLoc = 2476;
+		rLoc = 2482;
 		rType = 0;
 		vrLen = 663;
 		vrLoc = 2220;
@@ -773,7 +784,7 @@
 		fRef = 7AFCE3DB82619DF1BCA5951E /* FastFourierTransformer.cpp */;
 		name = "FastFourierTransformer.cpp: 97";
 		rLen = 0;
-		rLoc = 2428;
+		rLoc = 2434;
 		rType = 0;
 		vrLen = 847;
 		vrLoc = 1997;
@@ -813,7 +824,7 @@
 		fRef = 7AFCE3DB82619DF1BCA5951E /* FastFourierTransformer.cpp */;
 		name = "FastFourierTransformer.cpp: 102";
 		rLen = 0;
-		rLoc = 2476;
+		rLoc = 2482;
 		rType = 0;
 		vrLen = 663;
 		vrLoc = 2220;
@@ -932,7 +943,7 @@
 		fRef = 7AFCE3DB82619DF1BCA5951E /* FastFourierTransformer.cpp */;
 		name = "FastFourierTransformer.cpp: 97";
 		rLen = 0;
-		rLoc = 2428;
+		rLoc = 2434;
 		rType = 0;
 		vrLen = 813;
 		vrLoc = 2067;
@@ -942,7 +953,7 @@
 		fRef = 7AFCE3DB82619DF1BCA5951E /* FastFourierTransformer.cpp */;
 		name = "FastFourierTransformer.cpp: 126";
 		rLen = 0;
-		rLoc = 3045;
+		rLoc = 3051;
 		rType = 0;
 		vrLen = 991;
 		vrLoc = 2536;
@@ -952,7 +963,7 @@
 		fRef = 7AFCE3DB82619DF1BCA5951E /* FastFourierTransformer.cpp */;
 		name = "FastFourierTransformer.cpp: 123";
 		rLen = 0;
-		rLoc = 3045;
+		rLoc = 3051;
 		rType = 0;
 		vrLen = 784;
 		vrLoc = 2451;
@@ -962,7 +973,7 @@
 		fRef = 7AFCE3DB82619DF1BCA5951E /* FastFourierTransformer.cpp */;
 		name = "FastFourierTransformer.cpp: 134";
 		rLen = 0;
-		rLoc = 3045;
+		rLoc = 3051;
 		rType = 0;
 		vrLen = 812;
 		vrLoc = 2534;
@@ -1001,7 +1012,7 @@
 		fRef = 9B47885D93B38B2E09496655 /* FastFourierTransformer.h */;
 		name = "FastFourierTransformer.h: 52";
 		rLen = 0;
-		rLoc = 1282;
+		rLoc = 1285;
 		rType = 0;
 		vrLen = 834;
 		vrLoc = 449;
@@ -1011,7 +1022,7 @@
 		fRef = 7AFCE3DB82619DF1BCA5951E /* FastFourierTransformer.cpp */;
 		name = "FastFourierTransformer.cpp: 134";
 		rLen = 0;
-		rLoc = 3271;
+		rLoc = 3277;
 		rType = 0;
 		vrLen = 956;
 		vrLoc = 2562;
@@ -1040,7 +1051,7 @@
 		fRef = 7AFCE3DB82619DF1BCA5951E /* FastFourierTransformer.cpp */;
 		name = "FastFourierTransformer.cpp: 128";
 		rLen = 0;
-		rLoc = 3034;
+		rLoc = 3040;
 		rType = 0;
 		vrLen = 970;
 		vrLoc = 2534;
@@ -1060,7 +1071,7 @@
 		fRef = 7AFCE3DB82619DF1BCA5951E /* FastFourierTransformer.cpp */;
 		name = "FastFourierTransformer.cpp: 127";
 		rLen = 0;
-		rLoc = 3034;
+		rLoc = 3040;
 		rType = 0;
 		vrLen = 970;
 		vrLoc = 2534;
@@ -1145,6 +1156,116 @@
 		vrLen = 964;
 		vrLoc = 1516;
 	};
+	7F065D58161B3FB7008D145D /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 7AFCE3DB82619DF1BCA5951E /* FastFourierTransformer.cpp */;
+		name = "FastFourierTransformer.cpp: 152";
+		rLen = 0;
+		rLoc = 3664;
+		rType = 0;
+		vrLen = 860;
+		vrLoc = 3044;
+	};
+	7F065D5B161B4058008D145D /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 9B47885D93B38B2E09496655 /* FastFourierTransformer.h */;
+		name = "FastFourierTransformer.h: 40";
+		rLen = 0;
+		rLoc = 993;
+		rType = 0;
+		vrLen = 815;
+		vrLoc = 264;
+	};
+	7F065D5C161B4058008D145D /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 7AFCE3DB82619DF1BCA5951E /* FastFourierTransformer.cpp */;
+		name = "FastFourierTransformer.cpp: 152";
+		rLen = 0;
+		rLoc = 3664;
+		rType = 0;
+		vrLen = 811;
+		vrLoc = 2954;
+	};
+	7F065D5D161B4058008D145D /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 7AFCE3DB82619DF1BCA5951E /* FastFourierTransformer.cpp */;
+		name = "FastFourierTransformer.cpp: 77";
+		rLen = 0;
+		rLoc = 2030;
+		rType = 0;
+		vrLen = 994;
+		vrLoc = 1252;
+	};
+	7F065D60161B40AF008D145D /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 7AFCE3DB82619DF1BCA5951E /* FastFourierTransformer.cpp */;
+		name = "FastFourierTransformer.cpp: 142";
+		rLen = 0;
+		rLoc = 3485;
+		rType = 0;
+		vrLen = 857;
+		vrLoc = 2926;
+	};
+	7F065D63161B4100008D145D /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 9B47885D93B38B2E09496655 /* FastFourierTransformer.h */;
+		name = "FastFourierTransformer.h: 40";
+		rLen = 0;
+		rLoc = 993;
+		rType = 0;
+		vrLen = 815;
+		vrLoc = 264;
+	};
+	7F065D64161B4100008D145D /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 7AFCE3DB82619DF1BCA5951E /* FastFourierTransformer.cpp */;
+		name = "FastFourierTransformer.cpp: 144";
+		rLen = 0;
+		rLoc = 3520;
+		rType = 0;
+		vrLen = 845;
+		vrLoc = 2926;
+	};
+	7F065D65161B4100008D145D /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 7AFCE3DB82619DF1BCA5951E /* FastFourierTransformer.cpp */;
+		name = "FastFourierTransformer.cpp: 73";
+		rLen = 0;
+		rLoc = 1962;
+		rType = 0;
+		vrLen = 972;
+		vrLoc = 1458;
+	};
+	7F065D68161B4213008D145D /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 9B47885D93B38B2E09496655 /* FastFourierTransformer.h */;
+		name = "FastFourierTransformer.h: 41";
+		rLen = 0;
+		rLoc = 1035;
+		rType = 0;
+		vrLen = 865;
+		vrLoc = 485;
+	};
+	7F065D69161B4213008D145D /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 7AFCE3DB82619DF1BCA5951E /* FastFourierTransformer.cpp */;
+		name = "FastFourierTransformer.cpp: 139";
+		rLen = 10;
+		rLoc = 3318;
+		rType = 0;
+		vrLen = 956;
+		vrLoc = 3056;
+	};
+	7F065D6A161B4213008D145D /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 7AFCE3DB82619DF1BCA5951E /* FastFourierTransformer.cpp */;
+		name = "FastFourierTransformer.cpp: 142";
+		rLen = 0;
+		rLoc = 3485;
+		rType = 0;
+		vrLen = 1116;
+		vrLoc = 1018;
+	};
 	7F3AFBD4160E459300132FC6 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
 		comments = "Invalid operands of types 'double*' and 'double*' to binary 'operator*'";
@@ -1158,7 +1279,7 @@
 		fRef = 7AFCE3DB82619DF1BCA5951E /* FastFourierTransformer.cpp */;
 		name = "FastFourierTransformer.cpp: 114";
 		rLen = 0;
-		rLoc = 3655;
+		rLoc = 3683;
 		rType = 0;
 		vrLen = 662;
 		vrLoc = 2656;
@@ -1168,7 +1289,7 @@
 		fRef = 7AFCE3DB82619DF1BCA5951E /* FastFourierTransformer.cpp */;
 		name = "FastFourierTransformer.cpp: 114";
 		rLen = 0;
-		rLoc = 3655;
+		rLoc = 3683;
 		rType = 0;
 		vrLen = 664;
 		vrLoc = 2658;
@@ -1214,7 +1335,7 @@
 		fRef = 7AFCE3DB82619DF1BCA5951E /* FastFourierTransformer.cpp */;
 		name = "FastFourierTransformer.cpp: 64";
 		rLen = 0;
-		rLoc = 3079;
+		rLoc = 3085;
 		rType = 0;
 		vrLen = 875;
 		vrLoc = 1323;
@@ -1232,7 +1353,7 @@
 		fRef = 7AFCE3DB82619DF1BCA5951E /* FastFourierTransformer.cpp */;
 		name = "FastFourierTransformer.cpp: 63";
 		rLen = 0;
-		rLoc = 3079;
+		rLoc = 3085;
 		rType = 0;
 		vrLen = 938;
 		vrLoc = 1349;
@@ -1250,7 +1371,7 @@
 		fRef = 7AFCE3DB82619DF1BCA5951E /* FastFourierTransformer.cpp */;
 		name = "FastFourierTransformer.cpp: 63";
 		rLen = 0;
-		rLoc = 3079;
+		rLoc = 3085;
 		rType = 0;
 		vrLen = 938;
 		vrLoc = 1349;
@@ -1268,7 +1389,7 @@
 		fRef = 7AFCE3DB82619DF1BCA5951E /* FastFourierTransformer.cpp */;
 		name = "FastFourierTransformer.cpp: 63";
 		rLen = 0;
-		rLoc = 3079;
+		rLoc = 3085;
 		rType = 0;
 		vrLen = 936;
 		vrLoc = 1349;
@@ -1286,7 +1407,7 @@
 		fRef = 7AFCE3DB82619DF1BCA5951E /* FastFourierTransformer.cpp */;
 		name = "FastFourierTransformer.cpp: 63";
 		rLen = 0;
-		rLoc = 3079;
+		rLoc = 3085;
 		rType = 0;
 		vrLen = 936;
 		vrLoc = 1349;
@@ -1316,7 +1437,7 @@
 		fRef = 7AFCE3DB82619DF1BCA5951E /* FastFourierTransformer.cpp */;
 		name = "FastFourierTransformer.cpp: 122";
 		rLen = 0;
-		rLoc = 3655;
+		rLoc = 3683;
 		rType = 0;
 		vrLen = 833;
 		vrLoc = 2654;
@@ -1326,7 +1447,7 @@
 		fRef = 7AFCE3DB82619DF1BCA5951E /* FastFourierTransformer.cpp */;
 		name = "FastFourierTransformer.cpp: 122";
 		rLen = 0;
-		rLoc = 3655;
+		rLoc = 3683;
 		rType = 0;
 		vrLen = 833;
 		vrLoc = 2654;
@@ -1336,7 +1457,7 @@
 		fRef = 7AFCE3DB82619DF1BCA5951E /* FastFourierTransformer.cpp */;
 		name = "FastFourierTransformer.cpp: 63";
 		rLen = 0;
-		rLoc = 3079;
+		rLoc = 3085;
 		rType = 0;
 		vrLen = 936;
 		vrLoc = 1349;
@@ -1346,7 +1467,7 @@
 		fRef = 7AFCE3DB82619DF1BCA5951E /* FastFourierTransformer.cpp */;
 		name = "FastFourierTransformer.cpp: 63";
 		rLen = 0;
-		rLoc = 3079;
+		rLoc = 3085;
 		rType = 0;
 		vrLen = 936;
 		vrLoc = 1349;
@@ -1356,7 +1477,7 @@
 		fRef = 7AFCE3DB82619DF1BCA5951E /* FastFourierTransformer.cpp */;
 		name = "FastFourierTransformer.cpp: 103";
 		rLen = 0;
-		rLoc = 3655;
+		rLoc = 3683;
 		rType = 0;
 		vrLen = 654;
 		vrLoc = 2323;
@@ -1366,7 +1487,7 @@
 		fRef = 7AFCE3DB82619DF1BCA5951E /* FastFourierTransformer.cpp */;
 		name = "FastFourierTransformer.cpp: 103";
 		rLen = 0;
-		rLoc = 3655;
+		rLoc = 3683;
 		rType = 0;
 		vrLen = 679;
 		vrLoc = 2083;
@@ -1376,7 +1497,7 @@
 		fRef = 7AFCE3DB82619DF1BCA5951E /* FastFourierTransformer.cpp */;
 		name = "FastFourierTransformer.cpp: 110";
 		rLen = 0;
-		rLoc = 3079;
+		rLoc = 3085;
 		rType = 0;
 		vrLen = 863;
 		vrLoc = 2210;
@@ -1386,7 +1507,7 @@
 		fRef = 7AFCE3DB82619DF1BCA5951E /* FastFourierTransformer.cpp */;
 		name = "FastFourierTransformer.cpp: 109";
 		rLen = 0;
-		rLoc = 3079;
+		rLoc = 3085;
 		rType = 0;
 		vrLen = 865;
 		vrLoc = 2210;
@@ -1404,7 +1525,7 @@
 		fRef = 7AFCE3DB82619DF1BCA5951E /* FastFourierTransformer.cpp */;
 		name = "FastFourierTransformer.cpp: 109";
 		rLen = 0;
-		rLoc = 3079;
+		rLoc = 3085;
 		rType = 0;
 		vrLen = 833;
 		vrLoc = 2211;
@@ -1490,7 +1611,7 @@
 		fRef = 7AFCE3DB82619DF1BCA5951E /* FastFourierTransformer.cpp */;
 		name = "FastFourierTransformer.cpp: 109";
 		rLen = 0;
-		rLoc = 3079;
+		rLoc = 3085;
 		rType = 0;
 		vrLen = 848;
 		vrLoc = 2208;
@@ -1526,7 +1647,7 @@
 		fRef = 7AFCE3DB82619DF1BCA5951E /* FastFourierTransformer.cpp */;
 		name = "FastFourierTransformer.cpp: 154";
 		rLen = 0;
-		rLoc = 3850;
+		rLoc = 3878;
 		rType = 0;
 		vrLen = 629;
 		vrLoc = 3627;
@@ -1544,7 +1665,7 @@
 		fRef = 7AFCE3DB82619DF1BCA5951E /* FastFourierTransformer.cpp */;
 		name = "FastFourierTransformer.cpp: 152";
 		rLen = 0;
-		rLoc = 3816;
+		rLoc = 3844;
 		rType = 0;
 		vrLen = 628;
 		vrLoc = 3627;
@@ -1562,7 +1683,7 @@
 		fRef = 7AFCE3DB82619DF1BCA5951E /* FastFourierTransformer.cpp */;
 		name = "FastFourierTransformer.cpp: 158";
 		rLen = 0;
-		rLoc = 4159;
+		rLoc = 4187;
 		rType = 0;
 		vrLen = 626;
 		vrLoc = 3627;
@@ -1612,7 +1733,7 @@
 		fRef = 7AFCE3DB82619DF1BCA5951E /* FastFourierTransformer.cpp */;
 		name = "FastFourierTransformer.cpp: 106";
 		rLen = 0;
-		rLoc = 3076;
+		rLoc = 3082;
 		rType = 0;
 		vrLen = 1039;
 		vrLoc = 2304;
@@ -1622,7 +1743,7 @@
 		fRef = 7AFCE3DB82619DF1BCA5951E /* FastFourierTransformer.cpp */;
 		name = "FastFourierTransformer.cpp: 121";
 		rLen = 0;
-		rLoc = 3273;
+		rLoc = 3279;
 		rType = 0;
 		vrLen = 949;
 		vrLoc = 2398;
@@ -1632,7 +1753,7 @@
 		fRef = 7AFCE3DB82619DF1BCA5951E /* FastFourierTransformer.cpp */;
 		name = "FastFourierTransformer.cpp: 110";
 		rLen = 0;
-		rLoc = 3076;
+		rLoc = 3082;
 		rType = 0;
 		vrLen = 924;
 		vrLoc = 2532;
@@ -1696,7 +1817,7 @@
 		fRef = 7AFCE3DB82619DF1BCA5951E /* FastFourierTransformer.cpp */;
 		name = "FastFourierTransformer.cpp: 63";
 		rLen = 0;
-		rLoc = 3079;
+		rLoc = 3085;
 		rType = 0;
 		vrLen = 1110;
 		vrLoc = 1174;
@@ -1783,8 +1904,8 @@
 	9B47885D93B38B2E09496655 /* FastFourierTransformer.h */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {746, 767}}";
-			sepNavSelRange = "{993, 0}";
-			sepNavVisRange = "{449, 846}";
+			sepNavSelRange = "{1035, 0}";
+			sepNavVisRange = "{485, 865}";
 			sepNavWindowFrame = "{{19, 68}, {674, 705}}";
 		};
 	};

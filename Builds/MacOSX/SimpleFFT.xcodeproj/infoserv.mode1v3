@@ -300,7 +300,7 @@
 							<real>257</real>
 						</array>
 						<key>RubberWindowFrame</key>
-						<string>122 57 1086 670 0 0 1280 778 </string>
+						<string>113 82 1086 670 0 0 1280 778 </string>
 					</dict>
 					<key>Module</key>
 					<string>PBXSmartGroupTreeModule</string>
@@ -330,7 +330,7 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>7F065D55161B3DE5008D145D</string>
+										<string>7F065D6A161B4213008D145D</string>
 										<key>history</key>
 										<array>
 											<string>7F4A1DD715D03A92000605B0</string>
@@ -340,9 +340,9 @@
 											<string>7F065CD0161B2C8D008D145D</string>
 											<string>7F065D11161B350F008D145D</string>
 											<string>7F065D25161B37B5008D145D</string>
-											<string>7F065D44161B3C20008D145D</string>
 											<string>7F065D53161B3DE5008D145D</string>
-											<string>7F065D54161B3DE5008D145D</string>
+											<string>7F065D68161B4213008D145D</string>
+											<string>7F065D69161B4213008D145D</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -356,7 +356,7 @@
 								<key>Frame</key>
 								<string>{{0, 0}, {807, 510}}</string>
 								<key>RubberWindowFrame</key>
-								<string>122 57 1086 670 0 0 1280 778 </string>
+								<string>113 82 1086 670 0 0 1280 778 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXNavigatorGroup</string>
@@ -376,7 +376,7 @@
 								<key>Frame</key>
 								<string>{{0, 515}, {807, 114}}</string>
 								<key>RubberWindowFrame</key>
-								<string>122 57 1086 670 0 0 1280 778 </string>
+								<string>113 82 1086 670 0 0 1280 778 </string>
 							</dict>
 							<key>Module</key>
 							<string>XCDetailModule</string>
@@ -546,7 +546,7 @@
 		<string>/Users/infoserv/Documents/git_stuff/SimpleFFT/Builds/MacOSX/SimpleFFT.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
-	<string>122 57 1086 670 0 0 1280 778 </string>
+	<string>113 82 1086 670 0 0 1280 778 </string>
 	<key>WindowToolsV3</key>
 	<array>
 		<dict>
