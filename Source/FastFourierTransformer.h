@@ -29,8 +29,8 @@ public:
 	
 	//convert coordinates 
 	
-	double poltocarX	   (double Pangle, double Pradius);		
-	double poltocarY	   (double Pangle, double Pradius);
+	double poltocarX	   (double angle, double radius);		
+	double poltocarY	   (double angle, double radius);
 	double cartopolAngle   (double Cx, double Cy);
 	double cartopolRadius  (double Cx, double Cy);
 	

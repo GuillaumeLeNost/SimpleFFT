@@ -19,7 +19,7 @@
 
 // constructor
 
-FastFourierTransformer::FastFourierTransformer(int bufSize) {
+FastFourierTransformer::FastFourierTransformer (int bufSize) {
 	
 	data          = (fftw_complex*) fftw_malloc(sizeof(fftw_complex) * bufSize);
 	fft_result    = (fftw_complex*) fftw_malloc(sizeof(fftw_complex) * bufSize);
@@ -49,14 +49,14 @@ FastFourierTransformer::~FastFourierTransformer() {
 
 //polar to cartesian conversion functions
 
-double FastFourierTransformer::poltocarX ( double angle, double radius) { 
+double FastFourierTransformer::poltocarX (double angle, double radius) { 
 	
 	return cos(angle) * radius;
 }
 
 //--------------------------------------------------------------
 
-double FastFourierTransformer::poltocarY ( double angle, double radius) {
+double FastFourierTransformer::poltocarY (double angle, double radius) {
 	
 	return sin(angle) * radius ;	
 }
@@ -65,14 +65,14 @@ double FastFourierTransformer::poltocarY ( double angle, double radius) {
 
 //cartesian to polar conversion functions
 
-double FastFourierTransformer::cartopolRadius ( double x, double y) {
+double FastFourierTransformer::cartopolRadius (double x, double y) {
 	
 	return sqrt(y * y + x * x);	
 }
 
 //--------------------------------------------------------------
 
-double FastFourierTransformer::cartopolAngle ( double x, double y)  { 
+double FastFourierTransformer::cartopolAngle (double x, double y)  { 
 	
     if (x > 0) { return atan(y/x); }
 	if (x < 0 && y >= 0) {return atan(y/x) + M_PI; }
@@ -87,7 +87,7 @@ double FastFourierTransformer::cartopolAngle ( double x, double y)  {
 
 // fft conversion method
 
-void FastFourierTransformer::processForward(float* channelData, fftw_complex* fftData, int bufSize) {
+void FastFourierTransformer::processForward (float* channelData, fftw_complex* fftData, int bufSize) {
 	
 	for(i = 0; i < bufSize; i++) {
 		
@@ -108,7 +108,7 @@ void FastFourierTransformer::processForward(float* channelData, fftw_complex* ff
 
 // inverse fft conversion method
 
-void FastFourierTransformer::processBackward(fftw_complex* fftData, float* channelData, int bufSize) {
+void FastFourierTransformer::processBackward (fftw_complex* fftData, float* channelData, int bufSize) {
 			
 	for(i = 0; i < bufSize; i++) {
 		

@@ -137,21 +137,21 @@ void SimpleFftAudioProcessor::prepareToPlay (double sampleRate, int samplesPerBl
 	
     int bufsize = samplesPerBlock; 
 		
-	gain = 1.0;		// initialize variables for gain control
-	oldGain = 0.0;
+	/* likewise, allocating memory for this complex variable also seems to work OK using the
+	 samplesPerBlock in place of buffer.getNumSamples() */
+	
+	fftData = (fftw_complex*) fftw_malloc(sizeof(fftw_complex) * bufsize);	
 	
 	/* instantiating FFT here seems to work OK, rather than in processBlock where I sometimes got 
-	 memory messages in Logic */
-
+	 memory error messages in Logic */
+	
 	if(fft == NULL) {
 		
 		fft = new FastFourierTransformer(bufsize);
 	}
 	
-	/* likewise, allocating memory for this complex variable also seems to work OK using the
-	 samplesPerBlock in place of buffer.getNumSamples() */
-	
-	fftData = (fftw_complex*) fftw_malloc(sizeof(fftw_complex) * bufsize);	
+	gain = 1.0;		// initialize variables for gain control
+	oldGain = 0.0;
 		
 }
 

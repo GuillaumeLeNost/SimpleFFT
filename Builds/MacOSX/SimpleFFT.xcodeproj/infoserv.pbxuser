@@ -206,6 +206,15 @@
 			7FFB86BD161BA450007471BF /* PBXTextBookmark */ = 7FFB86BD161BA450007471BF /* PBXTextBookmark */;
 			7FFB86BE161BA450007471BF /* PBXTextBookmark */ = 7FFB86BE161BA450007471BF /* PBXTextBookmark */;
 			7FFB86C1161BA4A0007471BF /* PBXTextBookmark */ = 7FFB86C1161BA4A0007471BF /* PBXTextBookmark */;
+			7FFB86C4161BA6A4007471BF /* PBXTextBookmark */ = 7FFB86C4161BA6A4007471BF /* PBXTextBookmark */;
+			7FFB86C5161BA6A4007471BF /* PBXTextBookmark */ = 7FFB86C5161BA6A4007471BF /* PBXTextBookmark */;
+			7FFB86C6161BA6A4007471BF /* PBXTextBookmark */ = 7FFB86C6161BA6A4007471BF /* PBXTextBookmark */;
+			7FFB86C7161BA6A4007471BF /* PBXTextBookmark */ = 7FFB86C7161BA6A4007471BF /* PBXTextBookmark */;
+			7FFB86C8161BA6A4007471BF /* PBXTextBookmark */ = 7FFB86C8161BA6A4007471BF /* PBXTextBookmark */;
+			7FFB86C9161BA6A4007471BF /* PBXTextBookmark */ = 7FFB86C9161BA6A4007471BF /* PBXTextBookmark */;
+			7FFB86CC161BA86F007471BF /* PBXTextBookmark */ = 7FFB86CC161BA86F007471BF /* PBXTextBookmark */;
+			7FFB86CD161BA86F007471BF /* PBXTextBookmark */ = 7FFB86CD161BA86F007471BF /* PBXTextBookmark */;
+			7FFB86CE161BA86F007471BF /* PBXTextBookmark */ = 7FFB86CE161BA86F007471BF /* PBXTextBookmark */;
 		};
 		sourceControlManager = 7F8FCDC015B458BE00573402 /* Source Control */;
 		userBookmarkGroup = 7F065C6B161B19BB008D145D /* PBXBookmarkGroup */;
@@ -217,9 +226,9 @@
 	};
 	239FB798BC1745D055B23155 /* PluginProcessor.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {746, 1157}}";
+			sepNavIntBoundsRect = "{{0, 0}, {746, 1131}}";
 			sepNavSelRange = "{692, 0}";
-			sepNavVisRange = "{0, 1280}";
+			sepNavVisRange = "{1114, 1341}";
 			sepNavWindowFrame = "{{15, 0}, {523, 739}}";
 		};
 	};
@@ -246,9 +255,9 @@
 	};
 	7AFCE3DB82619DF1BCA5951E /* FastFourierTransformer.cpp */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {754, 2743}}";
-			sepNavSelRange = "{519, 0}";
-			sepNavVisRange = "{0, 1236}";
+			sepNavIntBoundsRect = "{{0, 0}, {746, 2821}}";
+			sepNavSelRange = "{521, 0}";
+			sepNavVisRange = "{1720, 1153}";
 		};
 	};
 	7F065C6B161B19BB008D145D /* PBXBookmarkGroup */ = {
@@ -273,7 +282,7 @@
 		fRef = 7AFCE3DB82619DF1BCA5951E /* FastFourierTransformer.cpp */;
 		name = "FastFourierTransformer.cpp: 128";
 		rLen = 0;
-		rLoc = 2871;
+		rLoc = 2869;
 		rType = 0;
 		vrLen = 970;
 		vrLoc = 2534;
@@ -333,7 +342,7 @@
 		fRef = 9B47885D93B38B2E09496655 /* FastFourierTransformer.h */;
 		name = "FastFourierTransformer.h: 46";
 		rLen = 0;
-		rLoc = 1337;
+		rLoc = 1333;
 		rType = 0;
 		vrLen = 1014;
 		vrLoc = 88;
@@ -343,7 +352,7 @@
 		fRef = 7AFCE3DB82619DF1BCA5951E /* FastFourierTransformer.cpp */;
 		name = "FastFourierTransformer.cpp: 132";
 		rLen = 0;
-		rLoc = 3363;
+		rLoc = 3362;
 		rType = 0;
 		vrLen = 1138;
 		vrLoc = 2317;
@@ -353,7 +362,7 @@
 		fRef = 7FB799F515D1692600BE58C4 /* PluginProcessor.cpp */;
 		name = "PluginProcessor.cpp: 185";
 		rLen = 0;
-		rLoc = 4294;
+		rLoc = 4301;
 		rType = 0;
 		vrLen = 1159;
 		vrLoc = 3884;
@@ -363,7 +372,7 @@
 		fRef = 44C261328D5C9D8987E07566 /* PluginProcessor.cpp */;
 		name = "PluginProcessor.cpp: 192";
 		rLen = 0;
-		rLoc = 4294;
+		rLoc = 4301;
 		rType = 0;
 		vrLen = 1123;
 		vrLoc = 3884;
@@ -400,8 +409,8 @@
 		sourceTree = "<absolute>";
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {746, 3094}}";
-			sepNavSelRange = "{4481, 0}";
-			sepNavVisRange = "{0, 990}";
+			sepNavSelRange = "{3368, 0}";
+			sepNavVisRange = "{663, 859}";
 		};
 	};
 	7FD88FA1160BD93800FE3352 /* audioeffectx.cpp */ = {
@@ -426,7 +435,7 @@
 		fRef = 7AFCE3DB82619DF1BCA5951E /* FastFourierTransformer.cpp */;
 		name = "FastFourierTransformer.cpp: 106";
 		rLen = 0;
-		rLoc = 2319;
+		rLoc = 2316;
 		rType = 0;
 		vrLen = 945;
 		vrLoc = 1737;
@@ -436,7 +445,7 @@
 		fRef = 7FB799F515D1692600BE58C4 /* PluginProcessor.cpp */;
 		name = "PluginProcessor.cpp: 154";
 		rLen = 0;
-		rLoc = 3514;
+		rLoc = 3521;
 		rType = 0;
 		vrLen = 1121;
 		vrLoc = 2488;
@@ -446,7 +455,7 @@
 		fRef = 7FB799F515D1692600BE58C4 /* PluginProcessor.cpp */;
 		name = "PluginProcessor.cpp: 146";
 		rLen = 0;
-		rLoc = 3514;
+		rLoc = 3521;
 		rType = 0;
 		vrLen = 1020;
 		vrLoc = 2750;
@@ -456,7 +465,7 @@
 		fRef = 7FB799F515D1692600BE58C4 /* PluginProcessor.cpp */;
 		name = "PluginProcessor.cpp: 135";
 		rLen = 0;
-		rLoc = 3014;
+		rLoc = 3003;
 		rType = 0;
 		vrLen = 1020;
 		vrLoc = 2750;
@@ -486,7 +495,7 @@
 		fRef = 7FB799F515D1692600BE58C4 /* PluginProcessor.cpp */;
 		name = "PluginProcessor.cpp: 135";
 		rLen = 0;
-		rLoc = 3014;
+		rLoc = 3003;
 		rType = 0;
 		vrLen = 854;
 		vrLoc = 1321;
@@ -516,7 +525,7 @@
 		fRef = 7FB799F515D1692600BE58C4 /* PluginProcessor.cpp */;
 		name = "PluginProcessor.cpp: 157";
 		rLen = 0;
-		rLoc = 3514;
+		rLoc = 3521;
 		rType = 0;
 		vrLen = 1021;
 		vrLoc = 3010;
@@ -526,7 +535,7 @@
 		fRef = 7AFCE3DB82619DF1BCA5951E /* FastFourierTransformer.cpp */;
 		name = "FastFourierTransformer.cpp: 106";
 		rLen = 0;
-		rLoc = 2319;
+		rLoc = 2316;
 		rType = 0;
 		vrLen = 945;
 		vrLoc = 1737;
@@ -536,7 +545,7 @@
 		fRef = 7AFCE3DB82619DF1BCA5951E /* FastFourierTransformer.cpp */;
 		name = "FastFourierTransformer.cpp: 77";
 		rLen = 0;
-		rLoc = 1087;
+		rLoc = 1088;
 		rType = 0;
 		vrLen = 1062;
 		vrLoc = 1373;
@@ -546,7 +555,7 @@
 		fRef = 7AFCE3DB82619DF1BCA5951E /* FastFourierTransformer.cpp */;
 		name = "FastFourierTransformer.cpp: 77";
 		rLen = 0;
-		rLoc = 1087;
+		rLoc = 1088;
 		rType = 0;
 		vrLen = 1115;
 		vrLoc = 3184;
@@ -556,7 +565,7 @@
 		fRef = 7FB799F515D1692600BE58C4 /* PluginProcessor.cpp */;
 		name = "PluginProcessor.cpp: 157";
 		rLen = 0;
-		rLoc = 3514;
+		rLoc = 3521;
 		rType = 0;
 		vrLen = 1021;
 		vrLoc = 3010;
@@ -566,7 +575,7 @@
 		fRef = 7FB799F515D1692600BE58C4 /* PluginProcessor.cpp */;
 		name = "PluginProcessor.cpp: 184";
 		rLen = 0;
-		rLoc = 3963;
+		rLoc = 3970;
 		rType = 0;
 		vrLen = 1130;
 		vrLoc = 3773;
@@ -576,7 +585,7 @@
 		fRef = 7FB799F515D1692600BE58C4 /* PluginProcessor.cpp */;
 		name = "PluginProcessor.cpp: 150";
 		rLen = 0;
-		rLoc = 3514;
+		rLoc = 3521;
 		rType = 0;
 		vrLen = 976;
 		vrLoc = 3110;
@@ -586,7 +595,7 @@
 		fRef = 7FB799F515D1692600BE58C4 /* PluginProcessor.cpp */;
 		name = "PluginProcessor.cpp: 285";
 		rLen = 0;
-		rLoc = 5861;
+		rLoc = 5868;
 		rType = 0;
 		vrLen = 990;
 		vrLoc = 0;
@@ -656,7 +665,7 @@
 		fRef = 7AFCE3DB82619DF1BCA5951E /* FastFourierTransformer.cpp */;
 		name = "FastFourierTransformer.cpp: 84";
 		rLen = 0;
-		rLoc = 1179;
+		rLoc = 1180;
 		rType = 0;
 		vrLen = 981;
 		vrLoc = 0;
@@ -666,7 +675,7 @@
 		fRef = 7AFCE3DB82619DF1BCA5951E /* FastFourierTransformer.cpp */;
 		name = "FastFourierTransformer.cpp: 84";
 		rLen = 0;
-		rLoc = 1179;
+		rLoc = 1180;
 		rType = 0;
 		vrLen = 981;
 		vrLoc = 0;
@@ -696,7 +705,7 @@
 		fRef = 9B47885D93B38B2E09496655 /* FastFourierTransformer.h */;
 		name = "FastFourierTransformer.h: 51";
 		rLen = 0;
-		rLoc = 1367;
+		rLoc = 1363;
 		rType = 0;
 		vrLen = 920;
 		vrLoc = 296;
@@ -766,7 +775,7 @@
 		fRef = 7FB799F515D1692600BE58C4 /* PluginProcessor.cpp */;
 		name = "PluginProcessor.cpp: 146";
 		rLen = 0;
-		rLoc = 3233;
+		rLoc = 3003;
 		rType = 0;
 		vrLen = 990;
 		vrLoc = 0;
@@ -826,7 +835,7 @@
 		fRef = 7AFCE3DB82619DF1BCA5951E /* FastFourierTransformer.cpp */;
 		name = "FastFourierTransformer.cpp: 104";
 		rLen = 0;
-		rLoc = 2319;
+		rLoc = 2316;
 		rType = 0;
 		vrLen = 1037;
 		vrLoc = 0;
@@ -836,7 +845,7 @@
 		fRef = 7AFCE3DB82619DF1BCA5951E /* FastFourierTransformer.cpp */;
 		name = "FastFourierTransformer.cpp: 71";
 		rLen = 0;
-		rLoc = 1018;
+		rLoc = 1019;
 		rType = 0;
 		vrLen = 1037;
 		vrLoc = 0;
@@ -911,7 +920,7 @@
 		fRef = 7FB799F515D1692600BE58C4 /* PluginProcessor.cpp */;
 		name = "PluginProcessor.cpp: 236";
 		rLen = 0;
-		rLoc = 4318;
+		rLoc = 4325;
 		rType = 0;
 		vrLen = 911;
 		vrLoc = 5129;
@@ -1000,7 +1009,7 @@
 		fRef = 7FB799F515D1692600BE58C4 /* PluginProcessor.cpp */;
 		name = "PluginProcessor.cpp: 236";
 		rLen = 0;
-		rLoc = 4392;
+		rLoc = 4399;
 		rType = 0;
 		vrLen = 1180;
 		vrLoc = 5011;
@@ -1010,7 +1019,7 @@
 		fRef = 7FB799F515D1692600BE58C4 /* PluginProcessor.cpp */;
 		name = "PluginProcessor.cpp: 204";
 		rLen = 0;
-		rLoc = 4318;
+		rLoc = 4325;
 		rType = 0;
 		vrLen = 1003;
 		vrLoc = 5030;
@@ -1049,7 +1058,7 @@
 		fRef = 9B47885D93B38B2E09496655 /* FastFourierTransformer.h */;
 		name = "FastFourierTransformer.h: 49";
 		rLen = 0;
-		rLoc = 1313;
+		rLoc = 1309;
 		rType = 0;
 		vrLen = 1023;
 		vrLoc = 337;
@@ -1069,7 +1078,7 @@
 		fRef = 7FB799F515D1692600BE58C4 /* PluginProcessor.cpp */;
 		name = "PluginProcessor.cpp: 205";
 		rLen = 0;
-		rLoc = 4399;
+		rLoc = 4406;
 		rType = 0;
 		vrLen = 1002;
 		vrLoc = 3722;
@@ -1079,7 +1088,7 @@
 		fRef = 7FB799F515D1692600BE58C4 /* PluginProcessor.cpp */;
 		name = "PluginProcessor.cpp: 192";
 		rLen = 0;
-		rLoc = 3963;
+		rLoc = 3970;
 		rType = 0;
 		vrLen = 952;
 		vrLoc = 3925;
@@ -1089,7 +1098,7 @@
 		fRef = 7FB799F515D1692600BE58C4 /* PluginProcessor.cpp */;
 		name = "PluginProcessor.cpp: 161";
 		rLen = 0;
-		rLoc = 3514;
+		rLoc = 3521;
 		rType = 0;
 		vrLen = 1139;
 		vrLoc = 2588;
@@ -1109,7 +1118,7 @@
 		fRef = 7FB799F515D1692600BE58C4 /* PluginProcessor.cpp */;
 		name = "PluginProcessor.cpp: 161";
 		rLen = 0;
-		rLoc = 3514;
+		rLoc = 3521;
 		rType = 0;
 		vrLen = 1009;
 		vrLoc = 3889;
@@ -1119,7 +1128,7 @@
 		fRef = 7FB799F515D1692600BE58C4 /* PluginProcessor.cpp */;
 		name = "PluginProcessor.cpp: 141";
 		rLen = 0;
-		rLoc = 3076;
+		rLoc = 3003;
 		rType = 0;
 		vrLen = 1233;
 		vrLoc = 2499;
@@ -1129,7 +1138,7 @@
 		fRef = 7FB799F515D1692600BE58C4 /* PluginProcessor.cpp */;
 		name = "PluginProcessor.cpp: 140";
 		rLen = 0;
-		rLoc = 3059;
+		rLoc = 3003;
 		rType = 0;
 		vrLen = 1233;
 		vrLoc = 2499;
@@ -1149,7 +1158,7 @@
 		fRef = 7FB799F515D1692600BE58C4 /* PluginProcessor.cpp */;
 		name = "PluginProcessor.cpp: 164";
 		rLen = 0;
-		rLoc = 3514;
+		rLoc = 3521;
 		rType = 0;
 		vrLen = 1082;
 		vrLoc = 2961;
@@ -1159,7 +1168,7 @@
 		fRef = 7FB799F515D1692600BE58C4 /* PluginProcessor.cpp */;
 		name = "PluginProcessor.cpp: 164";
 		rLen = 0;
-		rLoc = 3514;
+		rLoc = 3521;
 		rType = 0;
 		vrLen = 1082;
 		vrLoc = 2961;
@@ -1179,7 +1188,7 @@
 		fRef = 9B47885D93B38B2E09496655 /* FastFourierTransformer.h */;
 		name = "FastFourierTransformer.h: 40";
 		rLen = 0;
-		rLoc = 1165;
+		rLoc = 1161;
 		rType = 0;
 		vrLen = 1003;
 		vrLoc = 268;
@@ -1199,7 +1208,7 @@
 		fRef = 7AFCE3DB82619DF1BCA5951E /* FastFourierTransformer.cpp */;
 		name = "FastFourierTransformer.cpp: 153";
 		rLen = 0;
-		rLoc = 3843;
+		rLoc = 3842;
 		rType = 0;
 		vrLen = 1039;
 		vrLoc = 3567;
@@ -1209,7 +1218,7 @@
 		fRef = 9B47885D93B38B2E09496655 /* FastFourierTransformer.h */;
 		name = "FastFourierTransformer.h: 40";
 		rLen = 0;
-		rLoc = 1165;
+		rLoc = 1161;
 		rType = 0;
 		vrLen = 1025;
 		vrLoc = 298;
@@ -1259,7 +1268,7 @@
 		fRef = 7AFCE3DB82619DF1BCA5951E /* FastFourierTransformer.cpp */;
 		name = "FastFourierTransformer.cpp: 48";
 		rLen = 0;
-		rLoc = 1382;
+		rLoc = 1383;
 		rType = 0;
 		vrLen = 1190;
 		vrLoc = 2581;
@@ -1269,7 +1278,7 @@
 		fRef = 7AFCE3DB82619DF1BCA5951E /* FastFourierTransformer.cpp */;
 		name = "FastFourierTransformer.cpp: 29";
 		rLen = 0;
-		rLoc = 1018;
+		rLoc = 1019;
 		rType = 0;
 		vrLen = 1078;
 		vrLoc = 2534;
@@ -1279,7 +1288,7 @@
 		fRef = 7FB799F515D1692600BE58C4 /* PluginProcessor.cpp */;
 		name = "PluginProcessor.cpp: 182";
 		rLen = 0;
-		rLoc = 4156;
+		rLoc = 4163;
 		rType = 0;
 		vrLen = 990;
 		vrLoc = 0;
@@ -1299,7 +1308,7 @@
 		fRef = 7AFCE3DB82619DF1BCA5951E /* FastFourierTransformer.cpp */;
 		name = "FastFourierTransformer.cpp: 106";
 		rLen = 0;
-		rLoc = 2881;
+		rLoc = 2879;
 		rType = 0;
 		vrLen = 1240;
 		vrLoc = 0;
@@ -1309,7 +1318,7 @@
 		fRef = 9B47885D93B38B2E09496655 /* FastFourierTransformer.h */;
 		name = "FastFourierTransformer.h: 40";
 		rLen = 0;
-		rLoc = 1165;
+		rLoc = 1161;
 		rType = 0;
 		vrLen = 1027;
 		vrLoc = 296;
@@ -1319,7 +1328,7 @@
 		fRef = 9B47885D93B38B2E09496655 /* FastFourierTransformer.h */;
 		name = "FastFourierTransformer.h: 42";
 		rLen = 0;
-		rLoc = 1063;
+		rLoc = 1059;
 		rType = 0;
 		vrLen = 1087;
 		vrLoc = 0;
@@ -1359,7 +1368,7 @@
 		fRef = 7FB799F515D1692600BE58C4 /* PluginProcessor.cpp */;
 		name = "PluginProcessor.cpp: 189";
 		rLen = 0;
-		rLoc = 4481;
+		rLoc = 4488;
 		rType = 0;
 		vrLen = 990;
 		vrLoc = 0;
@@ -1389,7 +1398,7 @@
 		fRef = 9B47885D93B38B2E09496655 /* FastFourierTransformer.h */;
 		name = "FastFourierTransformer.h: 46";
 		rLen = 0;
-		rLoc = 1165;
+		rLoc = 1161;
 		rType = 0;
 		vrLen = 1065;
 		vrLoc = 0;
@@ -1429,7 +1438,7 @@
 		fRef = 9B47885D93B38B2E09496655 /* FastFourierTransformer.h */;
 		name = "FastFourierTransformer.h: 46";
 		rLen = 0;
-		rLoc = 1165;
+		rLoc = 1161;
 		rType = 0;
 		vrLen = 986;
 		vrLoc = 435;
@@ -1439,7 +1448,7 @@
 		fRef = 7FB799F515D1692600BE58C4 /* PluginProcessor.cpp */;
 		name = "PluginProcessor.cpp: 189";
 		rLen = 0;
-		rLoc = 4481;
+		rLoc = 4488;
 		rType = 0;
 		vrLen = 990;
 		vrLoc = 0;
@@ -1494,6 +1503,96 @@
 		vrLen = 1101;
 		vrLoc = 806;
 	};
+	7FFB86C4161BA6A4007471BF /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 9D9E445E6AC998BA8B7C19E8 /* MainPanel.cpp */;
+		name = "MainPanel.cpp: 42";
+		rLen = 0;
+		rLoc = 1371;
+		rType = 0;
+		vrLen = 1375;
+		vrLoc = 0;
+	};
+	7FFB86C5161BA6A4007471BF /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 9B47885D93B38B2E09496655 /* FastFourierTransformer.h */;
+		name = "FastFourierTransformer.h: 46";
+		rLen = 0;
+		rLoc = 1161;
+		rType = 0;
+		vrLen = 988;
+		vrLoc = 433;
+	};
+	7FFB86C6161BA6A4007471BF /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 239FB798BC1745D055B23155 /* PluginProcessor.h */;
+		name = "PluginProcessor.h: 25";
+		rLen = 0;
+		rLoc = 692;
+		rType = 0;
+		vrLen = 1341;
+		vrLoc = 1114;
+	};
+	7FFB86C7161BA6A4007471BF /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 7FB799F515D1692600BE58C4 /* PluginProcessor.cpp */;
+		name = "PluginProcessor.cpp: 147";
+		rLen = 0;
+		rLoc = 3368;
+		rType = 0;
+		vrLen = 859;
+		vrLoc = 663;
+	};
+	7FFB86C8161BA6A4007471BF /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 7AFCE3DB82619DF1BCA5951E /* FastFourierTransformer.cpp */;
+		name = "FastFourierTransformer.cpp: 20";
+		rLen = 0;
+		rLoc = 519;
+		rType = 0;
+		vrLen = 1236;
+		vrLoc = 0;
+	};
+	7FFB86C9161BA6A4007471BF /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 7AFCE3DB82619DF1BCA5951E /* FastFourierTransformer.cpp */;
+		name = "FastFourierTransformer.cpp: 20";
+		rLen = 0;
+		rLoc = 519;
+		rType = 0;
+		vrLen = 1236;
+		vrLoc = 0;
+	};
+	7FFB86CC161BA86F007471BF /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 9B47885D93B38B2E09496655 /* FastFourierTransformer.h */;
+		name = "FastFourierTransformer.h: 35";
+		rLen = 0;
+		rLoc = 852;
+		rType = 0;
+		vrLen = 982;
+		vrLoc = 435;
+	};
+	7FFB86CD161BA86F007471BF /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 7AFCE3DB82619DF1BCA5951E /* FastFourierTransformer.cpp */;
+		name = "FastFourierTransformer.cpp: 21";
+		rLen = 0;
+		rLoc = 521;
+		rType = 0;
+		vrLen = 1099;
+		vrLoc = 1163;
+	};
+	7FFB86CE161BA86F007471BF /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 7AFCE3DB82619DF1BCA5951E /* FastFourierTransformer.cpp */;
+		name = "FastFourierTransformer.cpp: 21";
+		rLen = 0;
+		rLoc = 521;
+		rType = 0;
+		vrLen = 1153;
+		vrLoc = 1720;
+	};
 	82FF4BB4F13F2B84953F7229 /* PluginEditor.h */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {746, 546}}";
@@ -1504,16 +1603,16 @@
 	9B47885D93B38B2E09496655 /* FastFourierTransformer.h */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {746, 780}}";
-			sepNavSelRange = "{1165, 0}";
-			sepNavVisRange = "{435, 986}";
+			sepNavSelRange = "{852, 0}";
+			sepNavVisRange = "{435, 982}";
 			sepNavWindowFrame = "{{19, 68}, {674, 705}}";
 		};
 	};
 	9D9E445E6AC998BA8B7C19E8 /* MainPanel.cpp */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {746, 1794}}";
+			sepNavIntBoundsRect = "{{0, 0}, {746, 1716}}";
 			sepNavSelRange = "{1371, 0}";
-			sepNavVisRange = "{806, 1101}";
+			sepNavVisRange = "{0, 1375}";
 		};
 	};
 	9FB7CE8D3E78067D1738F395 /* PluginEditor.cpp */ = {
