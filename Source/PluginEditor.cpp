@@ -31,10 +31,10 @@ SimpleFftAudioProcessorEditor::~SimpleFftAudioProcessorEditor()
 //==============================================================================
 void SimpleFftAudioProcessorEditor::paint (Graphics& g)
 {
-    g.fillAll (Colours::white);
-    g.setColour (Colours::black);
-    g.setFont (15.0f);
-    g.drawFittedText ("Hello World!",
-                      0, 0, getWidth(), getHeight(),
-                      Justification::centred, 1);
+//    g.fillAll (Colours::white);
+//    g.setColour (Colours::black);
+//    g.setFont (15.0f);
+//    g.drawFittedText ("Hello World!",
+//                      0, 0, getWidth(), getHeight(),
+//                      Justification::centred, 1);
 }

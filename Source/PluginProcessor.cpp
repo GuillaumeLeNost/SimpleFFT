@@ -127,15 +127,18 @@ void SimpleFftAudioProcessor::prepareToPlay (double sampleRate, int samplesPerBl
 {
     // Use this method as the place to do any pre-playback
     // initialisation that you need..
-	int   bufsize = samplesPerBlock;
-//	int   bufsize = buffer.getNumSamples();
-	fftData = (fftw_complex*) fftw_malloc(sizeof(fftw_complex) * bufsize);	
 	
+    int   bufsize = samplesPerBlock;
+//	int   bufsize = buffer.getNumSamples();
+
 	if(fft == NULL) {
 		
 		fft = new FastFourierTransformer(bufsize);
 		
 	}
+//	
+	fftData = (fftw_complex*) fftw_malloc(sizeof(fftw_complex) * bufsize);	
+	
 }
 
 void SimpleFftAudioProcessor::releaseResources()
@@ -151,10 +154,20 @@ void SimpleFftAudioProcessor::processBlock (AudioSampleBuffer& buffer, MidiBuffe
 
     // This is the place where you'd normally do the guts of your plugin's
     // audio processing...
-	int   bufsize = buffer.getNumSamples();
-		
 	
-//	float gainStep = (gain - oldGain)/buffer.getNumSamples();
+	int   bufsize = buffer.getNumSamples();
+	
+	double Pmagnitude[bufsize];
+	double Pangle[bufsize];
+		
+//	if(fft == NULL) {
+//		
+//		fft = new FastFourierTransformer(bufsize);
+//		
+//	}
+	
+	
+	float gainStep = (gain - oldGain)/buffer.getNumSamples();
 	
     for (int channel = 0; channel < getNumInputChannels(); ++channel)
 	{
@@ -167,14 +180,18 @@ void SimpleFftAudioProcessor::processBlock (AudioSampleBuffer& buffer, MidiBuffe
 		
 // do something
 
-//		fft->freqDomainGain(fftData, bufsize, gain);
-		
-//		for (int sampleNum = 0; sampleNum < bufsize; ++sampleNum)
-//			
-//		{
-//			oldGain += gainStep;
-//			channelData[sampleNum] = channelData[sampleNum] * oldGain ;
-//		}
+		for(int i = 0; i < bufsize; i++) {
+			
+			Pmagnitude[i] = fft->cartopolRadius(fftData[i][0], fftData[i][1]);
+			Pangle[i]	  =	fft->cartopolAngle (fftData[i][0], fftData[i][0]);
+			
+			oldGain += gainStep;
+			Pmagnitude[i] = Pmagnitude[i] * oldGain ;	
+			
+			fftData[i][0] = fft->poltocarX(Pangle[i], Pmagnitude[i]);
+			fftData[i][1] = fft->poltocarY(Pangle[i], Pmagnitude[i]);
+						
+		}
 			
 		
 // inverse fft

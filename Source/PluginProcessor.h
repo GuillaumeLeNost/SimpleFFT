@@ -69,7 +69,7 @@ private:
 	
 	float gain, oldGain; 
 	FastFourierTransformer* fft;
-	fftw_complex*  fftData;  //change this to type fftw3complex
+	fftw_complex*  fftData; 
 	
 
 	

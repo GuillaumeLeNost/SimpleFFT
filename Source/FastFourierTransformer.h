@@ -27,22 +27,24 @@ public:
 	FastFourierTransformer(int bufSize);
 	~FastFourierTransformer();
 	
+	void setupFFT(int bufSize);
+	
 	void processForward(float* channelData, fftw_complex* fftData, int bufSize);
 	void processBackward(fftw_complex* fftData, float* channelData, int bufSize);
 	
 	void freqDomainGain(int bufSize, float gain);
 	
-	float poltocarX (float Pangle, float Pradius);
-	float poltocarY (float Pangle, float Pradius);
-	float cartopolAngle (float Cx, float Cy);
-	float cartopolRadius (float Cx, float Cy);
+	double poltocarX (double Pangle, double Pradius);
+	double poltocarY (double Pangle, double Pradius);
+	double cartopolAngle (double Cx, double Cy);
+	double cartopolRadius (double Cx, double Cy);
 	
 						
 // member variables
 	
 private:
 	
-	fftw_complex    *data, *fft_result, *ifft_result, *tempData;	
+	fftw_complex    *data, *fft_result, *ifft_result;	
 	fftw_plan       plan_forward, plan_backward;
 	float           fftGain, oldFftGain;
 	float			magnitude[];

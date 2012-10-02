@@ -14,7 +14,7 @@
   ------------------------------------------------------------------------------
 
   The Jucer is part of the JUCE library - "Jules' Utility Class Extensions"
-  Copyright 2004-6 by Raw Material Software ltd.
+  Copyright 2004-  6 by Raw Material Software ltd.
 
   ==============================================================================
 */
