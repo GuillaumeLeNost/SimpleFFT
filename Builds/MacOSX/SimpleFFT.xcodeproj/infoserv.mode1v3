@@ -229,8 +229,6 @@
 			<key>Layout</key>
 			<array>
 				<dict>
-					<key>BecomeActive</key>
-					<true/>
 					<key>ContentConfiguration</key>
 					<dict>
 						<key>PBXBottomSmartGroupGIDs</key>
@@ -272,7 +270,7 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>4</integer>
+									<integer>6</integer>
 									<integer>3</integer>
 									<integer>1</integer>
 									<integer>0</integer>
@@ -298,7 +296,7 @@
 							<real>257</real>
 						</array>
 						<key>RubberWindowFrame</key>
-						<string>149 98 1086 670 0 0 1280 778 </string>
+						<string>148 100 1086 670 0 0 1280 778 </string>
 					</dict>
 					<key>Module</key>
 					<string>PBXSmartGroupTreeModule</string>
@@ -309,12 +307,14 @@
 					<key>Dock</key>
 					<array>
 						<dict>
+							<key>BecomeActive</key>
+							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>FastFourierTransformer.cpp</string>
+								<string>MainPanel.cpp</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -322,11 +322,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>FastFourierTransformer.cpp</string>
+										<string>MainPanel.cpp</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>7FFB86B5161BA0E0007471BF</string>
+										<string>7FFB86C1161BA4A0007471BF</string>
 										<key>history</key>
 										<array>
 											<string>7F4A1DD715D03A92000605B0</string>
@@ -334,12 +334,12 @@
 											<string>7FFB866B161B907C007471BF</string>
 											<string>7FFB86AD161BA0E0007471BF</string>
 											<string>7FFB86AE161BA0E0007471BF</string>
-											<string>7FFB86AF161BA0E0007471BF</string>
-											<string>7FFB86B0161BA0E0007471BF</string>
-											<string>7FFB86B1161BA0E0007471BF</string>
-											<string>7FFB86B2161BA0E0007471BF</string>
-											<string>7FFB86B3161BA0E0007471BF</string>
-											<string>7FFB86B4161BA0E0007471BF</string>
+											<string>7FFB86B8161BA450007471BF</string>
+											<string>7FFB86B9161BA450007471BF</string>
+											<string>7FFB86BA161BA450007471BF</string>
+											<string>7FFB86BB161BA450007471BF</string>
+											<string>7FFB86BC161BA450007471BF</string>
+											<string>7FFB86BD161BA450007471BF</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -353,7 +353,7 @@
 								<key>Frame</key>
 								<string>{{0, 0}, {807, 567}}</string>
 								<key>RubberWindowFrame</key>
-								<string>149 98 1086 670 0 0 1280 778 </string>
+								<string>148 100 1086 670 0 0 1280 778 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXNavigatorGroup</string>
@@ -373,7 +373,7 @@
 								<key>Frame</key>
 								<string>{{0, 572}, {807, 57}}</string>
 								<key>RubberWindowFrame</key>
-								<string>149 98 1086 670 0 0 1280 778 </string>
+								<string>148 100 1086 670 0 0 1280 778 </string>
 							</dict>
 							<key>Module</key>
 							<string>XCDetailModule</string>
@@ -542,7 +542,7 @@
 		<string>/Users/infoserv/Documents/git_stuff/SimpleFFT/Builds/MacOSX/SimpleFFT.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
-	<string>149 98 1086 670 0 0 1280 778 </string>
+	<string>148 100 1086 670 0 0 1280 778 </string>
 	<key>WindowToolsV3</key>
 	<array>
 		<dict>

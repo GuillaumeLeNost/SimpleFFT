@@ -39,6 +39,7 @@ MainPanel::MainPanel (SimpleFftAudioProcessor* ptr)
     slider->setSliderStyle (Slider::Rotary);
     slider->setTextBoxStyle (Slider::NoTextBox, false, 80, 20);
     slider->addListener (this);
+	slider->setValue(1.0, true, false);
 
     //[UserPreSize]
     //[/UserPreSize]
