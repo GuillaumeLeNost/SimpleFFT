@@ -57,6 +57,7 @@ double FastFourierTransformer::cartopolAngle ( double x, double y)  {
 	return 0;
 	
 }
+
 //--------------------------------------------------------------
 
 // simple fft class implementation
@@ -90,20 +91,6 @@ FastFourierTransformer::~FastFourierTransformer() {
 
 //--------------------------------------------------------------
 
-void FastFourierTransformer::setupFFT(int bufSize) {
-	
-	for(i = 0; i < bufSize; i++) {
-		
-		data[i][0] = 0.0;     
-		data[i][1] = 0.0;              
-	
-	}
-	
-}
-
-//--------------------------------------------------------------
-
-
 // fft conversion method
 
 void FastFourierTransformer::processForward(float* channelData, fftw_complex* fftData, int bufSize) {
@@ -120,8 +107,7 @@ void FastFourierTransformer::processForward(float* channelData, fftw_complex* ff
 		
 		fftData[i][0] = fft_result[i][0];
 		fftData[i][1] = fft_result[i][1];
-		
-		
+				
 	}
 	
     
@@ -144,7 +130,7 @@ void FastFourierTransformer::processBackward(fftw_complex* fftData, float* chann
 		
 	for(i = 0; i < bufSize; i++) {
 	
-		channelData[i] = ifft_result[i][0] / bufSize;
+		channelData[i] = ifft_result[i][0] / bufSize; //it was crunchy because we didn't have the / bufSize originally
 //		channelData[i][1] = ifft_result[i][1];		
 	}	
 	

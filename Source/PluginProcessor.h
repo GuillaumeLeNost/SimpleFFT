@@ -71,7 +71,6 @@ private:
 	FastFourierTransformer* fft;
 	fftw_complex*  fftData; 
 	
-
 	
     //==============================================================================
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (SimpleFftAudioProcessor);

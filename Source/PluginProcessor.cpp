@@ -155,17 +155,10 @@ void SimpleFftAudioProcessor::processBlock (AudioSampleBuffer& buffer, MidiBuffe
     // This is the place where you'd normally do the guts of your plugin's
     // audio processing...
 	
-	int   bufsize = buffer.getNumSamples();
+	int    bufsize = buffer.getNumSamples();
 	
 	double Pmagnitude[bufsize];
 	double Pangle[bufsize];
-		
-//	if(fft == NULL) {
-//		
-//		fft = new FastFourierTransformer(bufsize);
-//		
-//	}
-	
 	
 	float gainStep = (gain - oldGain)/buffer.getNumSamples();
 	
@@ -183,7 +176,7 @@ void SimpleFftAudioProcessor::processBlock (AudioSampleBuffer& buffer, MidiBuffe
 		for(int i = 0; i < bufsize; i++) {
 			
 			Pmagnitude[i] = fft->cartopolRadius(fftData[i][0], fftData[i][1]);
-			Pangle[i]	  =	fft->cartopolAngle (fftData[i][0], fftData[i][0]);
+			Pangle[i]	  =	fft->cartopolAngle(fftData[i][0], fftData[i][1]);
 			
 			oldGain += gainStep;
 			Pmagnitude[i] = Pmagnitude[i] * oldGain ;	
@@ -200,7 +193,7 @@ void SimpleFftAudioProcessor::processBlock (AudioSampleBuffer& buffer, MidiBuffe
 		
     }
 	
-//	oldGain = gain;
+	oldGain = gain;
 	
 	
     // In case we have more outputs than inputs, we'll clear any output

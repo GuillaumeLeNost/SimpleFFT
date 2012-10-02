@@ -27,8 +27,6 @@ public:
 	FastFourierTransformer(int bufSize);
 	~FastFourierTransformer();
 	
-	void setupFFT(int bufSize);
-	
 	void processForward(float* channelData, fftw_complex* fftData, int bufSize);
 	void processBackward(fftw_complex* fftData, float* channelData, int bufSize);
 	
@@ -46,7 +44,7 @@ private:
 	
 	fftw_complex    *data, *fft_result, *ifft_result;	
 	fftw_plan       plan_forward, plan_backward;
-	double           fftGain, oldFftGain;
+	double          fftGain, oldFftGain;
 	double			magnitude[];
 	double			phase[];
 	int             i;
