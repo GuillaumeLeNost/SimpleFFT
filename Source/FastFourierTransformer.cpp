@@ -8,7 +8,7 @@
   ==============================================================================
 */
 
-\
+
 #include "fftw3.h"
 #include "FastFourierTransformer.h"
 
@@ -130,45 +130,18 @@ void FastFourierTransformer::processBackward(fftw_complex* fftData, float* chann
 		
 	for(i = 0; i < bufSize; i++) {
 	
-		channelData[i] = ifft_result[i][0] / bufSize; //it was crunchy because we didn't have the / bufSize originally
-//		channelData[i][1] = ifft_result[i][1];		
+		channelData[i] = ifft_result[i][0] / bufSize; 
+		
+		//it was crunchy because we didn't divide by bufSize originally - see code below
+	
 	}	
 	
 }
 
 //--------------------------------------------------------------
-
-// gain function - this needs some attention!
-
-void FastFourierTransformer::freqDomainGain(int bufSize, float fftGain) {
-	
-	float fftGainStep;
-	
-	//cartesian to polar conversion
-	
-	for(i = 0; i < bufSize; i++) {
-		
-		magnitude[i] = cartopolRadius( fft_result[i][0], fft_result[i][1]);
-		phase[i]	 = cartopolAngle(fft_result[i][0], fft_result[i][1]);		
-	}		
-
-	for(i = 0; i < bufSize; i++) {
-
-		fftGainStep = (magnitude[i] - oldFftGain) / bufSize;
-		oldFftGain += fftGainStep;
-		magnitude[i] = magnitude[i] * oldFftGain ;
-		
-//		channelData[i] = fftData[i][0];
-//		data[i][1] = fftData[i][1];
-		
-	}
-	
-	oldFftGain = fftGain;
-	
-}
 	
 	
-/*  Martin demo code
+/*  Demo code
 
 void transform(){
 

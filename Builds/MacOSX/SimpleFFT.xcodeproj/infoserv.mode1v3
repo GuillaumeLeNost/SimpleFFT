@@ -265,17 +265,13 @@
 							<array>
 								<string>6DB89EE88F3A69DCA252D17B</string>
 								<string>D8DD1D0955DE24D522616894</string>
-								<string>1AA445E4307AD6419567ACD0</string>
-								<string>59442D49616BF3A28093DBAA</string>
 								<string>379A23AD35E2FABFF9783CE1</string>
-								<string>1C37FBAC04509CD000000102</string>
-								<string>7F065CA9161B1DBB008D145D</string>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>11</integer>
-									<integer>6</integer>
+									<integer>8</integer>
+									<integer>3</integer>
 									<integer>1</integer>
 									<integer>0</integer>
 								</array>
@@ -300,7 +296,7 @@
 							<real>257</real>
 						</array>
 						<key>RubberWindowFrame</key>
-						<string>113 82 1086 670 0 0 1280 778 </string>
+						<string>112 83 1086 670 0 0 1280 778 </string>
 					</dict>
 					<key>Module</key>
 					<string>PBXSmartGroupTreeModule</string>
@@ -330,19 +326,19 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>7F065D89161B4D21008D145D</string>
+										<string>7F065D96161B5147008D145D</string>
 										<key>history</key>
 										<array>
 											<string>7F4A1DD715D03A92000605B0</string>
 											<string>7F065C84161B1B9E008D145D</string>
 											<string>7F065CB6161B2A01008D145D</string>
-											<string>7F065CD0161B2C8D008D145D</string>
 											<string>7F065D11161B350F008D145D</string>
 											<string>7F065D84161B4D21008D145D</string>
-											<string>7F065D85161B4D21008D145D</string>
-											<string>7F065D86161B4D21008D145D</string>
-											<string>7F065D87161B4D21008D145D</string>
-											<string>7F065D88161B4D21008D145D</string>
+											<string>7F065D8D161B50E3008D145D</string>
+											<string>7F065D8E161B50E3008D145D</string>
+											<string>7F065D8F161B50E3008D145D</string>
+											<string>7F065D94161B5147008D145D</string>
+											<string>7F065D95161B5147008D145D</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -354,14 +350,14 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 0}, {807, 510}}</string>
+								<string>{{0, 0}, {807, 569}}</string>
 								<key>RubberWindowFrame</key>
-								<string>113 82 1086 670 0 0 1280 778 </string>
+								<string>112 83 1086 670 0 0 1280 778 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXNavigatorGroup</string>
 							<key>Proportion</key>
-							<string>510pt</string>
+							<string>569pt</string>
 						</dict>
 						<dict>
 							<key>ContentConfiguration</key>
@@ -374,14 +370,14 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 515}, {807, 114}}</string>
+								<string>{{0, 574}, {807, 55}}</string>
 								<key>RubberWindowFrame</key>
-								<string>113 82 1086 670 0 0 1280 778 </string>
+								<string>112 83 1086 670 0 0 1280 778 </string>
 							</dict>
 							<key>Module</key>
 							<string>XCDetailModule</string>
 							<key>Proportion</key>
-							<string>114pt</string>
+							<string>55pt</string>
 						</dict>
 					</array>
 					<key>Proportion</key>
@@ -546,7 +542,7 @@
 		<string>/Users/infoserv/Documents/git_stuff/SimpleFFT/Builds/MacOSX/SimpleFFT.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
-	<string>113 82 1086 670 0 0 1280 778 </string>
+	<string>112 83 1086 670 0 0 1280 778 </string>
 	<key>WindowToolsV3</key>
 	<array>
 		<dict>

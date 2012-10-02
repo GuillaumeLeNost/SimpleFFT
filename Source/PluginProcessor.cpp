@@ -128,15 +128,22 @@ void SimpleFftAudioProcessor::prepareToPlay (double sampleRate, int samplesPerBl
     // Use this method as the place to do any pre-playback
     // initialisation that you need..
 	
-    int   bufsize = samplesPerBlock;
-//	int   bufsize = buffer.getNumSamples();
+	// this seems to work for size of the fft, even though we use buffer.getNumSamples() later
+	
+    int   bufsize = samplesPerBlock;  
+	
+	/* instantiating FFT here seems to work OK, rather than in processBlock where I sometimes got 
+	 memory messages in Logic */
 
 	if(fft == NULL) {
 		
 		fft = new FastFourierTransformer(bufsize);
 		
 	}
-//	
+	
+	/* likewise, allocating memory for this complex variable also seems to work fine using the
+	 samplesPerBlock in place of buffer.getNumSamples() */
+	
 	fftData = (fftw_complex*) fftw_malloc(sizeof(fftw_complex) * bufsize);	
 	
 }
@@ -157,6 +164,8 @@ void SimpleFftAudioProcessor::processBlock (AudioSampleBuffer& buffer, MidiBuffe
 	
 	int    bufsize = buffer.getNumSamples();
 	
+	// can I declare these arrays in some other way than as local variables?
+	
 	double Pmagnitude[bufsize];
 	double Pangle[bufsize];
 	
@@ -171,15 +180,21 @@ void SimpleFftAudioProcessor::processBlock (AudioSampleBuffer& buffer, MidiBuffe
 		
 		fft->processForward(channelData, fftData, bufsize);
 		
-// do something
+// FFT gain control - not sure if this is the most efficient way of doing this...but it works!
 
 		for(int i = 0; i < bufsize; i++) {
+			
+			//cartesian to polar conversion
 			
 			Pmagnitude[i] = fft->cartopolRadius(fftData[i][0], fftData[i][1]);
 			Pangle[i]	  =	fft->cartopolAngle(fftData[i][0], fftData[i][1]);
 			
+			//change polar magnitude
+			
 			oldGain += gainStep;
 			Pmagnitude[i] = Pmagnitude[i] * oldGain ;	
+			
+			//polar to cartesian conversion
 			
 			fftData[i][0] = fft->poltocarX(Pangle[i], Pmagnitude[i]);
 			fftData[i][1] = fft->poltocarY(Pangle[i], Pmagnitude[i]);
