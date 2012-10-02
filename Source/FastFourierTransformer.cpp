@@ -8,12 +8,8 @@
   ==============================================================================
 */
 
-
 #include "fftw3.h"
 #include "FastFourierTransformer.h"
-
-
-//polar/cartesian conversion functions
 
 //--------------------------------------------------------------
 
@@ -23,7 +19,6 @@ double FastFourierTransformer::poltocarX ( double angle, double radius) {
 	
 	return cos(angle) * radius;
 }
-
 
 //--------------------------------------------------------------
 
@@ -38,8 +33,7 @@ double FastFourierTransformer::poltocarY ( double angle, double radius) {
 //cartesian to polar conversion functions
 
 double FastFourierTransformer::cartopolRadius ( double x, double y) {
-	
-	
+		
 	return sqrt(y * y + x * x);
 	
 }
@@ -66,14 +60,16 @@ double FastFourierTransformer::cartopolAngle ( double x, double y)  {
 
 FastFourierTransformer::FastFourierTransformer(int bufSize) {
 	
-	data        = (fftw_complex*) fftw_malloc(sizeof(fftw_complex) * bufSize);
-	fft_result  = (fftw_complex*) fftw_malloc(sizeof(fftw_complex) * bufSize);
-	ifft_result = (fftw_complex*) fftw_malloc(sizeof(fftw_complex) * bufSize);
+	data          = (fftw_complex*) fftw_malloc(sizeof(fftw_complex) * bufSize);
+	fft_result    = (fftw_complex*) fftw_malloc(sizeof(fftw_complex) * bufSize);
+	ifft_result   = (fftw_complex*) fftw_malloc(sizeof(fftw_complex) * bufSize);
 	
-	plan_forward  = fftw_plan_dft_1d(bufSize, data, fft_result, FFTW_FORWARD, FFTW_ESTIMATE);
-	plan_backward = fftw_plan_dft_1d(bufSize, fft_result, ifft_result, FFTW_BACKWARD, FFTW_ESTIMATE);	
+	plan_forward  = fftw_plan_dft_1d(bufSize, data, fft_result, FFTW_FORWARD, FFTW_MEASURE);
+	plan_backward = fftw_plan_dft_1d(bufSize, fft_result, ifft_result, FFTW_BACKWARD, FFTW_MEASURE);	
 	
 }
+
+//-------------------------------------------------------------
 
 // destructor
 
@@ -84,8 +80,27 @@ FastFourierTransformer::~FastFourierTransformer() {
 	fftw_free(ifft_result);
 	
 	
-	fftw_destroy_plan( plan_forward);	
-	fftw_destroy_plan( plan_backward);
+	fftw_destroy_plan(plan_forward);	
+	fftw_destroy_plan(plan_backward);
+	
+}
+
+//--------------------------------------------------------------
+
+// initialize FFT variables
+
+void FastFourierTransformer::initFFT(int bufSize) {
+	
+	for(i = 0; i < bufSize; i++) {
+	
+		data[i][0]			= 0.0;
+		data[i][1]			= 0.0;
+		fft_result[i][0]	= 0.0;
+		fft_result[i][1]	= 0.0;
+		ifft_result[i][0]	= 0.0;
+		ifft_result[i][1]	= 0.0;
+			
+	}	
 	
 }
 
@@ -110,7 +125,6 @@ void FastFourierTransformer::processForward(float* channelData, fftw_complex* ff
 				
 	}
 	
-    
 }
 
 //--------------------------------------------------------------
@@ -118,8 +132,7 @@ void FastFourierTransformer::processForward(float* channelData, fftw_complex* ff
 // inverse fft conversion method
 
 void FastFourierTransformer::processBackward(fftw_complex* fftData, float* channelData, int bufSize) {
-		
-	
+			
 	for(i = 0; i < bufSize; i++) {
 		
 		fft_result[i][0] = fftData[i][0];        // stick your fft data in here!
@@ -132,15 +145,13 @@ void FastFourierTransformer::processBackward(fftw_complex* fftData, float* chann
 	
 		channelData[i] = ifft_result[i][0] / bufSize; 
 		
-		//it was crunchy because we didn't divide by bufSize originally - see code below
-	
+		//it was crunchy because we didn't divide by bufSize originally - see code below	
 	}	
 	
 }
 
 //--------------------------------------------------------------
-	
-	
+		
 /*  Demo code
 
 void transform(){

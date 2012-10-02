@@ -22,20 +22,24 @@ class SimpleFftAudioProcessor  : public AudioProcessor
 {
 public:
     //==============================================================================
+	
     SimpleFftAudioProcessor();
     ~SimpleFftAudioProcessor();
 
     //==============================================================================
+	
     void prepareToPlay (double sampleRate, int samplesPerBlock);
     void releaseResources();
 
     void processBlock (AudioSampleBuffer& buffer, MidiBuffer& midiMessages);
 
     //==============================================================================
+	
     AudioProcessorEditor* createEditor();
     bool hasEditor() const;
 
     //==============================================================================
+	
     const String getName() const;
 
     int getNumParameters();
@@ -55,6 +59,7 @@ public:
     bool producesMidi() const;
 
     //==============================================================================
+	
     int   getNumPrograms();
     int   getCurrentProgram();
     void  setCurrentProgram (int index);
@@ -62,6 +67,7 @@ public:
     void  changeProgramName (int index, const String& newName);
 
     //==============================================================================
+	
     void getStateInformation (MemoryBlock& destData);
     void setStateInformation (const void* data, int sizeInBytes);
 
@@ -73,6 +79,7 @@ private:
 	
 	
     //==============================================================================
+	
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (SimpleFftAudioProcessor);
 };
 

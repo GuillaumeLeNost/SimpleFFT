@@ -23,11 +23,11 @@
 #define __JUCER_HEADER_MAINPANEL_MAINPANEL_9929C8B3__
 
 //[Headers]     -- You can add your own extra header files here --
+
 #include "../JuceLibraryCode/JuceHeader.h"
 #include "PluginProcessor.h"
+
 //[/Headers]
-
-
 
 //==============================================================================
 /**
@@ -37,11 +37,14 @@
     Describe your class and how it works here!
                                                                     //[/Comments]
 */
+
 class MainPanel  : public Component,
                    public SliderListener
 {
 public:
+	
     //==============================================================================
+	
     MainPanel(SimpleFftAudioProcessor* ptr);
     ~MainPanel();
 
@@ -53,12 +56,12 @@ public:
     void resized();
     void sliderValueChanged (Slider* sliderThatWasMoved);
 
-
-
     //==============================================================================
+	
     juce_UseDebuggingNewOperator
 
 private:
+	
     //[UserVariables]   -- You can add your own custom variables in this section.
 
 	SimpleFftAudioProcessor* processor;
@@ -66,11 +69,12 @@ private:
     //[/UserVariables]
 
     //==============================================================================
+	
     Slider* slider;
-
 
     //==============================================================================
     // (prevent copy constructor and operator= being generated..)
+	
     MainPanel (const MainPanel&);
     const MainPanel& operator= (const MainPanel&);
 };

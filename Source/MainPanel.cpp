@@ -29,6 +29,7 @@
 //[/MiscUserDefs]
 
 //==============================================================================
+
 MainPanel::MainPanel (SimpleFftAudioProcessor* ptr)
     : Component (L"MainPanel"),
       slider (0)
@@ -39,12 +40,10 @@ MainPanel::MainPanel (SimpleFftAudioProcessor* ptr)
     slider->setTextBoxStyle (Slider::NoTextBox, false, 80, 20);
     slider->addListener (this);
 
-
     //[UserPreSize]
     //[/UserPreSize]
 
     setSize (600, 400);
-
 
     //[Constructor] You can add your own custom stuff here..
 
@@ -60,12 +59,12 @@ MainPanel::~MainPanel()
 
     deleteAndZero (slider);
 
-
     //[Destructor]. You can add your own custom destruction code here..
     //[/Destructor]
 }
 
 //==============================================================================
+
 void MainPanel::paint (Graphics& g)
 {
     //[UserPrePaint] Add your own custom painting code here..
@@ -101,8 +100,6 @@ void MainPanel::sliderValueChanged (Slider* sliderThatWasMoved)
     //[UsersliderValueChanged_Post]
     //[/UsersliderValueChanged_Post]
 }
-
-
 
 //[MiscUserCode] You can add your own definitions of your custom methods or any other code here...
 //[/MiscUserCode]
