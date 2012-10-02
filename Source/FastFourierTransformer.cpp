@@ -13,48 +13,9 @@
 
 //--------------------------------------------------------------
 
-//polar to cartesian conversion functions
-
-double FastFourierTransformer::poltocarX ( double angle, double radius) { 
-	
-	return cos(angle) * radius;
-}
-
-//--------------------------------------------------------------
-
-double FastFourierTransformer::poltocarY ( double angle, double radius) {
-	
-	return sin(angle) * radius ;
-	
-}
-
-//--------------------------------------------------------------
-
-//cartesian to polar conversion functions
-
-double FastFourierTransformer::cartopolRadius ( double x, double y) {
-		
-	return sqrt(y * y + x * x);
-	
-}
-
-//--------------------------------------------------------------
-
-double FastFourierTransformer::cartopolAngle ( double x, double y)  { 
-	
-    if (x > 0) { return atan(y/x); }
-	if (x < 0 && y >= 0) {return atan(y/x) + M_PI; }
-	if (x < 0 && y < 0) {return atan(y/x) - M_PI; }
-	if (y > 0) { return M_PI / 2; }
-	if (y < 0) { return -M_PI / 2; }
-	
-	return 0;
-	
-}
-
-//--------------------------------------------------------------
-
 // simple fft class implementation
+
+//--------------------------------------------------------------
 
 // constructor
 
@@ -65,7 +26,7 @@ FastFourierTransformer::FastFourierTransformer(int bufSize) {
 	ifft_result   = (fftw_complex*) fftw_malloc(sizeof(fftw_complex) * bufSize);
 	
 	plan_forward  = fftw_plan_dft_1d(bufSize, data, fft_result, FFTW_FORWARD, FFTW_MEASURE);
-	plan_backward = fftw_plan_dft_1d(bufSize, fft_result, ifft_result, FFTW_BACKWARD, FFTW_MEASURE);	
+	plan_backward = fftw_plan_dft_1d(bufSize, data, ifft_result, FFTW_BACKWARD, FFTW_MEASURE);	
 	
 }
 
@@ -78,8 +39,7 @@ FastFourierTransformer::~FastFourierTransformer() {
 	fftw_free(data);
 	fftw_free(fft_result);
 	fftw_free(ifft_result);
-	
-	
+		
 	fftw_destroy_plan(plan_forward);	
 	fftw_destroy_plan(plan_backward);
 	
@@ -87,21 +47,40 @@ FastFourierTransformer::~FastFourierTransformer() {
 
 //--------------------------------------------------------------
 
-// initialize FFT variables
+//polar to cartesian conversion functions
 
-void FastFourierTransformer::initFFT(int bufSize) {
+double FastFourierTransformer::poltocarX ( double angle, double radius) { 
 	
-	for(i = 0; i < bufSize; i++) {
+	return cos(angle) * radius;
+}
+
+//--------------------------------------------------------------
+
+double FastFourierTransformer::poltocarY ( double angle, double radius) {
 	
-		data[i][0]			= 0.0;
-		data[i][1]			= 0.0;
-		fft_result[i][0]	= 0.0;
-		fft_result[i][1]	= 0.0;
-		ifft_result[i][0]	= 0.0;
-		ifft_result[i][1]	= 0.0;
-			
-	}	
+	return sin(angle) * radius ;	
+}
+
+//--------------------------------------------------------------
+
+//cartesian to polar conversion functions
+
+double FastFourierTransformer::cartopolRadius ( double x, double y) {
 	
+	return sqrt(y * y + x * x);	
+}
+
+//--------------------------------------------------------------
+
+double FastFourierTransformer::cartopolAngle ( double x, double y)  { 
+	
+    if (x > 0) { return atan(y/x); }
+	if (x < 0 && y >= 0) {return atan(y/x) + M_PI; }
+	if (x < 0 && y < 0) {return atan(y/x) - M_PI; }
+	if (y > 0) { return M_PI / 2; }
+	if (y < 0) { return -M_PI / 2; }
+	
+	return 0;	
 }
 
 //--------------------------------------------------------------
@@ -121,10 +100,8 @@ void FastFourierTransformer::processForward(float* channelData, fftw_complex* ff
 	for (i = 0; i < bufSize; i++) {
 		
 		fftData[i][0] = fft_result[i][0];
-		fftData[i][1] = fft_result[i][1];
-				
-	}
-	
+		fftData[i][1] = fft_result[i][1];				
+	}	
 }
 
 //--------------------------------------------------------------
@@ -135,8 +112,8 @@ void FastFourierTransformer::processBackward(fftw_complex* fftData, float* chann
 			
 	for(i = 0; i < bufSize; i++) {
 		
-		fft_result[i][0] = fftData[i][0];        // stick your fft data in here!
-		fft_result[i][1] = fftData[i][1];        // use this if your data is complex valued
+		data[i][0] = fftData[i][0];        // stick your fft data in here!
+		data[i][1] = fftData[i][1];        // use this if your data is complex valued
 	}	
 	
 	fftw_execute(plan_backward);
@@ -145,7 +122,36 @@ void FastFourierTransformer::processBackward(fftw_complex* fftData, float* chann
 	
 		channelData[i] = ifft_result[i][0] / bufSize; 
 		
-		//it was crunchy because we didn't divide by bufSize originally - see code below	
+		//it was crunchy because we weren't dividing ifft_result[0] by bufSize - see code at bottom	
+	}		
+}
+
+//--------------------------------------------------------------
+
+// fft gain control function
+
+void FastFourierTransformer::gainFFT (fftw_complex* fftData, float oldGain, float gainStep, int bufSize) {
+		
+	double Pmagnitude[bufSize];			//local arrays for storing polar coordinates
+	double Pangle[bufSize];
+		
+	for(int i = 0; i < bufSize; i++) {
+		
+		//cartesian to polar conversion
+		
+		Pmagnitude[i] = this->cartopolRadius(fftData[i][0], fftData[i][1]);
+		Pangle[i]	  =	this->cartopolAngle(fftData[i][0], fftData[i][1]);
+		
+		//change polar magnitude
+		
+		oldGain += gainStep;
+		Pmagnitude[i] = Pmagnitude[i] * oldGain ;	
+		
+		//polar to cartesian conversion
+		
+		fftData[i][0] = this->poltocarX(Pangle[i], Pmagnitude[i]);
+		fftData[i][1] = this->poltocarY(Pangle[i], Pmagnitude[i]);
+		
 	}	
 	
 }

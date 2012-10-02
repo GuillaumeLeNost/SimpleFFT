@@ -135,9 +135,10 @@ void SimpleFftAudioProcessor::prepareToPlay (double sampleRate, int samplesPerBl
 	
 	// this seems to work for size of the fft, even though we use buffer.getNumSamples() later
 	
-    int   bufsize = samplesPerBlock; 
-	
-	gain = 1.0;
+    int bufsize = samplesPerBlock; 
+		
+	gain = 1.0;		// initialize variables for gain control
+	oldGain = 0.0;
 	
 	/* instantiating FFT here seems to work OK, rather than in processBlock where I sometimes got 
 	 memory messages in Logic */
@@ -147,23 +148,11 @@ void SimpleFftAudioProcessor::prepareToPlay (double sampleRate, int samplesPerBl
 		fft = new FastFourierTransformer(bufsize);
 	}
 	
-	//initializing FFT variables in an attempt to stop noise on load - is this necessary?
-	
-	fft->initFFT(bufsize);
-	
-	/* likewise, allocating memory for this complex variable also seems to work fine using the
+	/* likewise, allocating memory for this complex variable also seems to work OK using the
 	 samplesPerBlock in place of buffer.getNumSamples() */
 	
-	fftData = (fftw_complex*) fftw_malloc(sizeof(fftw_complex) * bufsize);
-	
-	//initialize fftData complex array
-	
-	for (int i = 0; i < bufsize; i++) {
+	fftData = (fftw_complex*) fftw_malloc(sizeof(fftw_complex) * bufsize);	
 		
-		fftData[i][0] = 0.0;
-		fftData[i][1] = 0.0;		
-	}
-	
 }
 
 void SimpleFftAudioProcessor::releaseResources()
@@ -177,29 +166,12 @@ void SimpleFftAudioProcessor::releaseResources()
 void SimpleFftAudioProcessor::processBlock (AudioSampleBuffer& buffer, MidiBuffer& midiMessages)
 
 {
-
     // This is the place where you'd normally do the guts of your plugin's
     // audio processing...
 	
-	int    bufsize = buffer.getNumSamples();
+	int    bufsize = buffer.getNumSamples();	
 	
-	// can I declare these arrays in some other way than as local variables?
-	
-	double Pmagnitude[bufsize];
-	double Pangle[bufsize];
-	
-	//initializing local arrays in an attempt to stop noise on load - is this necessary?
-	
-	for (int i = 0; i < bufsize; i++) {
-		
-		Pmagnitude[i] = 0.0;
-		Pangle[i]	  = 0.0;
-	}
-	
-	//local variable for incrementing gain
-	
-	float gainStep = (gain - oldGain)/buffer.getNumSamples();
-	
+	float  gainStep = (gain - oldGain) / bufsize;	//local variable for incrementing gain	
 	
 //main process loop
 	
@@ -208,34 +180,11 @@ void SimpleFftAudioProcessor::processBlock (AudioSampleBuffer& buffer, MidiBuffe
 		
         float* channelData = buffer.getSampleData (channel);		
 		
-		//fft
+		fft->processForward(channelData, fftData, bufsize);	 //fft
 		
-		fft->processForward(channelData, fftData, bufsize);
-		
-		// FFT gain control - not sure if this is the most efficient way of doing this...but it works!
-
-		for(int i = 0; i < bufsize; i++) {
-			
-			//cartesian to polar conversion
-			
-			Pmagnitude[i] = fft->cartopolRadius(fftData[i][0], fftData[i][1]);
-			Pangle[i]	  =	fft->cartopolAngle(fftData[i][0], fftData[i][1]);
-			
-			//change polar magnitude
-			
-			oldGain += gainStep;
-			Pmagnitude[i] = Pmagnitude[i] * oldGain ;	
-			
-			//polar to cartesian conversion
-			
-			fftData[i][0] = fft->poltocarX(Pangle[i], Pmagnitude[i]);
-			fftData[i][1] = fft->poltocarY(Pangle[i], Pmagnitude[i]);
-						
-		}
+		fft->gainFFT(fftData, oldGain, gainStep, bufsize);	 // FFT gain control - moved into FFT class
 					
-		// inverse fft
-		
-		fft->processBackward(fftData, channelData, bufsize);		
+		fft->processBackward(fftData, channelData, bufsize); // inverse fft
 		
     }
 	
@@ -247,7 +196,7 @@ void SimpleFftAudioProcessor::processBlock (AudioSampleBuffer& buffer, MidiBuffe
 	
     for (int i = getNumInputChannels(); i < getNumOutputChannels(); ++i)
     {
-        buffer.clear (i, 0, buffer.getNumSamples());
+        buffer.clear (i, 0, bufsize);
     }
 	
 }

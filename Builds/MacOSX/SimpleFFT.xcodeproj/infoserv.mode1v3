@@ -229,6 +229,8 @@
 			<key>Layout</key>
 			<array>
 				<dict>
+					<key>BecomeActive</key>
+					<true/>
 					<key>ContentConfiguration</key>
 					<dict>
 						<key>PBXBottomSmartGroupGIDs</key>
@@ -296,7 +298,7 @@
 							<real>257</real>
 						</array>
 						<key>RubberWindowFrame</key>
-						<string>113 83 1086 670 0 0 1280 778 </string>
+						<string>149 98 1086 670 0 0 1280 778 </string>
 					</dict>
 					<key>Module</key>
 					<string>PBXSmartGroupTreeModule</string>
@@ -307,8 +309,6 @@
 					<key>Dock</key>
 					<array>
 						<dict>
-							<key>BecomeActive</key>
-							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
@@ -326,19 +326,20 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>7FFB8649161B895D007471BF</string>
+										<string>7FFB86B5161BA0E0007471BF</string>
 										<key>history</key>
 										<array>
 											<string>7F4A1DD715D03A92000605B0</string>
 											<string>7F065C84161B1B9E008D145D</string>
-											<string>7FFB863B161B7C70007471BF</string>
-											<string>7FFB8642161B895D007471BF</string>
-											<string>7FFB8643161B895D007471BF</string>
-											<string>7FFB8644161B895D007471BF</string>
-											<string>7FFB8645161B895D007471BF</string>
-											<string>7FFB8646161B895D007471BF</string>
-											<string>7FFB8647161B895D007471BF</string>
-											<string>7FFB8648161B895D007471BF</string>
+											<string>7FFB866B161B907C007471BF</string>
+											<string>7FFB86AD161BA0E0007471BF</string>
+											<string>7FFB86AE161BA0E0007471BF</string>
+											<string>7FFB86AF161BA0E0007471BF</string>
+											<string>7FFB86B0161BA0E0007471BF</string>
+											<string>7FFB86B1161BA0E0007471BF</string>
+											<string>7FFB86B2161BA0E0007471BF</string>
+											<string>7FFB86B3161BA0E0007471BF</string>
+											<string>7FFB86B4161BA0E0007471BF</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -352,7 +353,7 @@
 								<key>Frame</key>
 								<string>{{0, 0}, {807, 567}}</string>
 								<key>RubberWindowFrame</key>
-								<string>113 83 1086 670 0 0 1280 778 </string>
+								<string>149 98 1086 670 0 0 1280 778 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXNavigatorGroup</string>
@@ -372,7 +373,7 @@
 								<key>Frame</key>
 								<string>{{0, 572}, {807, 57}}</string>
 								<key>RubberWindowFrame</key>
-								<string>113 83 1086 670 0 0 1280 778 </string>
+								<string>149 98 1086 670 0 0 1280 778 </string>
 							</dict>
 							<key>Module</key>
 							<string>XCDetailModule</string>
@@ -536,11 +537,12 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
+		<string>1C530D57069F1CE1000CFCEE</string>
 		<string>7F8FCDBE15B458BE00573402</string>
 		<string>/Users/infoserv/Documents/git_stuff/SimpleFFT/Builds/MacOSX/SimpleFFT.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
-	<string>113 83 1086 670 0 0 1280 778 </string>
+	<string>149 98 1086 670 0 0 1280 778 </string>
 	<key>WindowToolsV3</key>
 	<array>
 		<dict>
@@ -561,7 +563,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CD0528F0623707200166675</string>
 								<key>PBXProjectModuleLabel</key>
-								<string></string>
+								<string>FastFourierTransformer.cpp</string>
 								<key>StatusBarVisibility</key>
 								<true/>
 							</dict>
@@ -578,6 +580,8 @@
 							<string>418pt</string>
 						</dict>
 						<dict>
+							<key>BecomeActive</key>
+							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
@@ -777,7 +781,7 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CDD528C0622207200134675</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>PluginProcessor.cpp</string>
+										<string>juce_LookAndFeel.cpp</string>
 										<key>StatusBarVisibility</key>
 										<true/>
 									</dict>
@@ -835,8 +839,8 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>1C530D57069F1CE1000CFCEE</string>
-				<string>7FB799F715D1692600BE58C4</string>
-				<string>7FB799F815D1692600BE58C4</string>
+				<string>7FFB864C161B8AB8007471BF</string>
+				<string>7FFB864D161B8AB8007471BF</string>
 				<string>1CDD528C0622207200134675</string>
 				<string>1CD0528E0623707200166675</string>
 			</array>

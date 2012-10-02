@@ -24,19 +24,24 @@ class FastFourierTransformer {
 	
 public:
 	
-	FastFourierTransformer (int bufSize);
-	~FastFourierTransformer();
+	FastFourierTransformer (int bufSize);	//constructor
+	~FastFourierTransformer();				//destructor
 	
-	void initFFT		   (int bufSize);
+	//convert coordinates 
+	
+	double poltocarX	   (double Pangle, double Pradius);		
+	double poltocarY	   (double Pangle, double Pradius);
+	double cartopolAngle   (double Cx, double Cy);
+	double cartopolRadius  (double Cx, double Cy);
+	
+	//fft conversion
 	
 	void processForward	   (float* channelData, fftw_complex* fftData, int bufSize);
 	void processBackward   (fftw_complex* fftData, float* channelData, int bufSize);
 	
+	//fft gain
 	
-	double poltocarX	   (double Pangle, double Pradius);
-	double poltocarY	   (double Pangle, double Pradius);
-	double cartopolAngle   (double Cx, double Cy);
-	double cartopolRadius  (double Cx, double Cy);
+	void gainFFT		   (fftw_complex* fftData, float oldGain, float gainStep, int bufSize);
 	
 						
 // member variables
@@ -45,6 +50,7 @@ private:
 	
 	fftw_complex    *data, *fft_result, *ifft_result;	
 	fftw_plan       plan_forward, plan_backward;
+	double			Pangle[], Pmagnitude[];
 	int             i;
 	
 };
